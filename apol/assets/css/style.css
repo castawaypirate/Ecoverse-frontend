@@ -1,0 +1,42 @@
+:root {
+    --color-primary: #5f9ea0;
+    --color-secondary: #a3c1ad;
+    --color-primary-dark: #4c7f81;
+    --color-secondary-dark: #77a386;
+    --color-success: ;
+    --color-danger: #8d0101;
+    --color-warning: #fccb29;
+    --color-info: #a0d6d4;
+    --color-light: #e0f2f1;
+    --color-dark: #317873;
+    --font-primary: sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("assets\images\env.jpeg");
+  
+    display: block;
+    /* Full height */
+    height: 100vh;
+
+    width: 100vh;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
