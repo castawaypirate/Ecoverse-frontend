@@ -227,7 +227,6 @@ footer {
     display: flex;
     justify-content: center;
     color: white;
-    padding: 2rem;
     background-color: var(--color-dark);
     box-shadow: -2px -2px 2px black;
 }
