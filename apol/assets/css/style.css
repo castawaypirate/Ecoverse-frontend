@@ -18,8 +18,8 @@ html, body {
 }
 
 * {
-    box-sizing: border-box;
-    font-family: var(--font-primary);
+  box-sizing: border-box;
+  font-family: var(--font-primary);
 }
 
 a {
@@ -41,9 +41,10 @@ a {
 
   /* Add styles to the form container */
 .container {
+    border-radius: 15px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     max-width: 300px;
@@ -52,21 +53,29 @@ a {
   }
   
   /* Full-width input fields */
-    input[type=text], input[type=password] {
+  input[type=text], input[type=password] {
+    border-radius: 10px;
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
+    border:1px solid lightgray;
+    background: white;
   }
   
   input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, .5);
+  }
+
+  .psw{
+    margin: 4px 4px;
+    bottom: 10px;
+    position: relative;
   }
   
   /* Set a style for the submit button */
   .btn {
+    border-radius: 10px;
     background-color: var(--color-primary);
     color: white;
     padding: 16px 20px;
@@ -78,4 +87,19 @@ a {
   
   .btn:hover {
     opacity: 1;
+  }
+
+  .remember{
+    position: relative;
+    top: 8px;
+  }
+
+  .create{
+    border-radius: 15px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+    position: relative;
+    top: 600px;
+    left: 550px;
   }
