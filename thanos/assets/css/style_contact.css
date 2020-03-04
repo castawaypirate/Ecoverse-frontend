@@ -1,0 +1,136 @@
+:root {
+    --color-primary: #5f9ea0;
+    --color-secondary: #a3c1ad;
+    --color-primary-dark: #4c7f81;
+    --color-primary-darker: #316163;
+    --color-secondary-dark: #77a386;
+    --color-danger: #8d0101;
+    --color-warning: #fccb29;
+    --color-info: #a0d6d4;
+    --color-light: #e0f2f1;
+    --color-dark: #317873;
+    --font-primary: sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn{
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    max-width: 300px;
+}
+
+header{
+    height: 83px;
+    width: 100%;
+}
+
+header .header{
+    width:100%;
+    background-color: var(--color-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    box-shadow: 0 2px 3px black;
+    z-index: 1;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+}
+.menu .item a{
+    padding: 1rem;
+    display: block;
+    transition: color 300ms ease, background-color 300ms ease;
+    color: var(--color-secondary);
+    border-radius: 8px;
+    border: none;
+}
+
+.menu .item a:hover{
+    color: white;
+    background-color: var(--color-primary-darker);
+}
+
+
+.main_box {
+
+    position: relative;
+}
+
+.main_box .image{
+    width: 100%;
+    object-fit: cover;
+    max-height: 100vh;
+    filter: blur(8px);
+}
+.main_box .contact_window{
+    padding: 2rem;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    display: block;
+    left: calc(50% - 250px);
+    bottom: calc(50% - 150px);
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 30px black;
+}
+
+.main_box .contact_window *{
+    margin-top: 30px;
+}
+
+.main_box .contact_window .social{
+    position: relative;
+    margin-top: 1px;
+    justify-content: left;
+    display: flex;
+    width: 100%;
+    left: 0;
+}
+.main_box .contact_window .social  a img{
+    position: absolute;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    border: 0;
+    width: 80px;
+    height: 80px;
+}
+.main_box .contact_window .social a{
+    position: relative;
+    margin: 0;
+    width: 80px;
+    height: 80px;
+}
+.main_box .contact_window .social a:nth-child(2){
+    margin-left: 1rem;
+}
+
+footer{
+    width: 100%;
+    color: white;
+    justify-content: center;
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 -2px 3px black;
+    align-items: center;
+    display: flex;
+}
