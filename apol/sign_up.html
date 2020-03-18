@@ -1,5 +1,5 @@
 <html lang="en"><head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create your account</title>
     <link href="assets/css/style_sign_up.css" rel="stylesheet">
     <script src="assets/js/script.js"></script>
@@ -7,8 +7,34 @@
 </head>
 <body>
     <header>
-        <div class="header">
+        <div class="header pc">
             <nav>
+                <ul class="menu">
+                    <li class="menu-item active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Announcements</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">About us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Contact</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header mobile">
+            <input class="menu-toggle" id="menu-icon" type="checkbox" class="hidden" />
+            <label class="hamburger" for="menu-icon">
+                <span class="hamburger-icon"></span>
+            </label>
+            
+            <nav class="mmenu">
                 <ul class="menu">
                     <li class="menu-item">
                         <a href="#">Home</a>
@@ -16,19 +42,15 @@
                     <li class="menu-item">
                         <a href="#">Announcements</a>
                     </li>
-                    <li class="menu-item ">
+                    <li class="menu-item">
                         <a href="#">About us</a>
                     </li>
                     <li class="menu-item">
                         <a href="#">Contact</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#">Sign in</a>
+                        <a href="#">Login</a>
                     </li>
-                    <li class="menu-item active">
-                        <a href="#">Sign up</a>
-                    </li>
-
                 </ul>
             </nav>
         </div>
@@ -36,47 +58,45 @@
 
     <form action="action_page.php">
         <div class="container">
-          <h1>Create an account</h1>
-          <p>Already have an account? <a href="#" style="color:dodgerblue">Sign in</a>.</p>
-          <hr> 
-          
-          <div class="con1">
-            <div class="field">
-                <input type="text" required autocomplete="off" id="usr" required>
-                <label for="usr" title="Username" data-title="Username"></label>
+            <h1>Create an account</h1>
+            <p>Already have an account? <a href="#" style="color:dodgerblue">Sign in</a>.</p>
+            <hr> 
+            
+            <div class="con1">
+                <div class="field">
+                    <input type="text" required autocomplete="off" id="usr" required>
+                    <label for="usr" title="Username" data-title="Username"></label>
+                </div>
+                <div class="field">
+                    <input type="text" required autocomplete="off" id="mail" required>
+                    <label for="mail" title="Email" data-title="Email"></label>
+                </div>
             </div>
-            <div class="field">
-                <input type="text" required autocomplete="off" id="mail" required>
-                <label for="mail" title="Email" data-title="Email"></label>
-            </div>
-      
-          </div>
-      
-          
-          <div class="con2">
-            <div class="field">
-                <input type="password" required autocomplete="off" id="psw">
-                <label for="psw" title="Password" data-title="Password"></label>
+
+            <div class="con2">
+                <div class="field">
+                    <input type="password" required autocomplete="off" id="psw">
+                    <label for="psw" title="Password" data-title="Password"></label>
+                </div>
+                
+                <div class="field">
+                    <input type="password" required autocomplete="off" id="conf">
+                    <label for="conf" title="Confirm" data-title="Confirm"></label>
+                </div>
+                
+                <div class="eye slash" onclick="togglePW()">
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
             
-            <div class="field">
-                <input type="password" required autocomplete="off" id="conf">
-                <label for="conf" title="Confirm" data-title="Confirm"></label>
-            </div>
-            
-            <div class="eye slash" onclick="togglePW()">
-                <div></div>
-                <div></div>
-            </div>
-          </div>
-          
-          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-      
-          <div class="clearfix">
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        
+            <div class="clearfix">
             <button type="submit" class="signupbtn">Create an account</button>
-          </div>
+            </div>
         </div>
-      </form>
+    </form>
 
     <footer>
         Powered by AUTH Students
