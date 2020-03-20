@@ -41,7 +41,7 @@ a {
 header {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--color-dark);
     box-shadow: 2px 2px 5px black;
 }
@@ -194,16 +194,20 @@ img {
     content: none;
 }
 
+.cl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 90%;
+}
+
 .container {
     border-radius: 15px;
     margin: 0 auto;
     max-width: 500px;
-    max-height: 1000px;
     padding: 2rem 1rem;
     background-color: white;
-    /* left: calc(50% - 250px);
-    top: calc(50% - 250px);
-    position: absolute; */
 }
 
 hr {
@@ -214,8 +218,6 @@ hr {
 
 .con1 input[type=text] {
     width: 100%;
-    height: 100%;
-    display: block;
 }
 
 
@@ -270,6 +272,8 @@ hr {
 
 .con2 {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .eye{
@@ -279,6 +283,7 @@ hr {
     display:inline-block;
     --background:white;
     --color:#aaa;
+    margin-bottom: 3%;
 }
 .eye div{
     overflow:hidden;
@@ -351,26 +356,10 @@ footer {
     left: 0;
     bottom: 0;
 }
-  
-/* @media only screen and (max-width: 1200px) {
-    .container {
-        max-width: 600px;
-        margin: 0;
-        position: absolute;
-        top: 40%;
-        left: 20%;
-        transform: translate(-35%, -50%);
-    }
-}
 
 @media only screen and (max-width: 992px) {
     .container {
         max-width: 600px;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 40%;
-        transform: translate(-35%, -50%);
     }
     .header.pc {
         display: none;
@@ -386,11 +375,34 @@ footer {
 @media only screen and (max-width: 768px) {
     body {
         background-image: none;
+        background-color: white;
+    }
+    .container {
+        border: 1px solid lightgray;
     }
     
 }
 
 @media only screen and (max-width: 576px) {
+    .cl {
+        max-width: 100%;
+        height: 80%;
+    }
     
+    .container {
+        border:none;
+    }
+
+    .con2 {
+        display:block;
+    }
+
+    .con2 input[type=text] {
+        width: 100%;
+    }
+
+    .con2 input[type=password] {
+        width: 100%;
+    }
+
 }
-   */
