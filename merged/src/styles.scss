@@ -1,0 +1,88 @@
+:root {
+  --color-primary: #5f9ea0;
+  --color-secondary: #a3c1ad;
+  --color-primary-dark: #4c7f81;
+  --color-secondary-dark: #77a386;
+  --color-success: ;
+  --color-danger: #8d0101;
+  --color-warning: #fccb29;
+  --color-info: #a0d6d4;
+  --color-light: #e0f2f1;
+  --color-dark: #317873;
+  --font-primary: sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-light);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-background);
+  transition: background-color 300ms ease;
+  cursor: pointer;
+  color: var(--color);
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: var(--color-background-dark);
+}
+
+.btn-primary {
+  --color-background: var(--color-primary);
+  --color-background-dark: var(--color-primary-dark);
+  --color: white;
+}
+
+.btn-secondary {
+  --color-background: var(--color-secondary);
+  --color-background-dark: var(--color-secondary-dark);
+  --color: white;
+}
+
+.card {
+  padding: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 1rem 0;
+  border-radius: 20px;
+}
+
+.card .card-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.card .card-body {
+  padding: 2rem;
+  color: black;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1199px;
+  padding: 2rem 1rem;
+  /* background-color: white; */
+}

@@ -1,0 +1,144 @@
+.header {
+  width: 100%;
+  color: white;
+  padding: 1rem;
+  height: 80px;
+}
+
+.header.mobile {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: block;
+  position: relative;
+  width: 20px;
+  background-color: white;
+  height: 2px;
+  margin: 1rem;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  background-color: white;
+  height: 2px;
+  transition: transform 300ms ease;
+}
+
+.hamburger-icon::before {
+  bottom: 7px;
+  transform-origin: left top;
+}
+
+.hamburger-icon::after {
+  top: 7px;
+  transform-origin: left bottom;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.mmenu {
+  position: absolute;
+  top: 100%;
+  overflow: hidden;
+  right: 0;
+}
+
+.mmenu .menu {
+  transform: translateX(100%);
+  padding: 16px;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  background-color: var(--color-primary-dark);
+  /* transform-origin: right; */
+  transition: transform 300ms ease;
+}
+
+.menu-toggle:checked ~ .hamburger .hamburger-icon {
+  background-color: unset !important;
+}
+
+.menu-toggle:checked ~ .hamburger .hamburger-icon::before {
+  transform: rotate(47deg);
+}
+
+.menu-toggle:checked ~ .hamburger .hamburger-icon::after {
+  transform: rotate(-47deg);
+}
+
+.menu-toggle:checked ~ .mmenu .menu {
+  transform: translateX(0);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu .menu-item {
+    padding: 1rem;
+  }
+  
+  .menu .menu-item a {
+    color: var(--color-secondary);
+    display: block;
+    position: relative;
+    transition: color 300ms ease;
+  }
+  
+  .menu .menu-item a::after {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 0;
+    height: 0.2rem;
+    width: 100%;
+    transform: scale(0, 1);
+    transform-origin: center;
+    transition: transform 300ms ease;
+    background-color: var(--color-info);
+  }
+  
+  .menu .menu-item a:hover {
+    color: white;
+    display: block;
+  }
+  
+  .menu .menu-item a:hover::after {
+    transform: scale(1, 1);
+  }
+  
+  .menu .menu-item.active a {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .menu .menu-item.active a::after {
+    transform: scale(1);
+  }
+  
+  .mmenu .menu .menu-item a::after{
+      content: none;
+  }
