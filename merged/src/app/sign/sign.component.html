@@ -1,0 +1,86 @@
+<!-- <form [formGroup]="userprofileForm" (ngSubmit)="onSubmit()">
+    <label>
+        Username:
+        <input type="text" formControlName="username">
+    </label>
+    <label>
+        Password:
+        <input type="password" formControlName="password">
+    </label>
+    <button type="submit" [disabled]="!userprofileForm.valid">Submit</button>
+</form> -->
+<div class="cl">
+    <div class="container">
+        <ul class="tab-group">
+            <li class="tablink active"><a href="#signup">Create an account</a></li>
+            <!-- <div class="vl"></div>
+            <li class="tablink" onclick="openTab('sign-in-tab', this)"><a href="#signin">Sign in</a></li> -->
+        </ul>
+        <div id="sign-up-tab" class="tabcontent">
+            <hr> 
+            <form [formGroup]="userprofileForm" (ngSubmit)="onSubmit()">
+                <div class="con1">
+                    <div class="field">
+                        <input type="text" autocomplete="off" id="usr" formControlName="username">
+                        <label for="usr" title="Username" data-title="Username"></label>
+                    </div>
+                    <div class="field">
+                        <input type="text" autocomplete="off" id="mail" formControlName="email">
+                        <label for="mail" title="Email" data-title="Email"></label>
+                    </div>
+                </div>
+
+                <div class="con2">
+                    <div class="field">
+                        <input type="password" autocomplete="off" id="psw" formControlName="password">
+                        <label for="psw" title="Password" data-title="Password"></label>
+                    </div>
+                    
+                    <div class="field" id="field4">
+                        <input type="password" autocomplete="off" id="conf" formControlName="confirm">
+                        <label for="conf" title="Confirm" data-title="Confirm"></label>
+                    </div>
+                    
+                    <div class="eye slash" onclick="togglePW()">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        
+                <div class="clearfix">
+                    <button type="submit" class="signbtn" [disabled]="!userprofileForm.valid">Create an account</button>
+                </div>
+            </form>
+        </div>
+        <!-- <div id="sign-in-tab" class="tabcontent">
+            <hr> 
+            <form action="action_page.php">
+                <div class="con3">
+                    <div class="field">
+                        <input type="text" required autocomplete="off" id="usrin" required>
+                        <label for="usrin" title="Username/Email" data-title="Username"></label>
+                    </div>
+                    <div class="field">
+                        <input type="password" required autocomplete="off" id="pswin">
+                        <label for="pswin" title="Password" data-title="Password"></label>
+                    </div>
+                </div>
+                
+                <div class="con4">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <div><a href="#" style="color:dodgerblue">Forgot password?</a></div>
+                </div>
+                
+                <div class="clearfix">
+                    <button type="submit" class="signbtn" disabled="!userprofileForm.valid">Sign in</button>
+                </div>
+
+                
+            </form>
+        </div> -->
+    </div>
+</div>
