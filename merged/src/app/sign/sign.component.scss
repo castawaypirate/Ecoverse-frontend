@@ -12,6 +12,13 @@
 //     box-sizing: border-box;
 //     font-family: var(--font-primary);
 // }
+
+:host {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
   
 a {
     text-decoration: none;
@@ -38,11 +45,12 @@ a.active {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
     max-width: 100%;
     height: 100%;
+    flex: 1 1 auto;
 }
 
 .container {
