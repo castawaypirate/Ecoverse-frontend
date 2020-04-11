@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign.component.scss']
 })
 export class SignComponent implements OnInit {
+  isPassword: boolean=true;
 
   constructor(private fb: FormBuilder,private router: Router) { }
 
@@ -28,4 +29,13 @@ export class SignComponent implements OnInit {
     console.log(this.router.url);
   }
 
+  togglePasswordVisibility(){
+
+    if(this.isPassword === true){
+        this.isPassword = false;
+     } else{
+        this.isPassword = true;
+     }
+
+    }
 }

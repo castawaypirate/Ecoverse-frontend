@@ -1,17 +1,3 @@
-// body {
-//     background-image: url("../../assets/images/env.jpeg");
-//     background-repeat: no-repeat;
-//     background-position: center center;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     display: block;
-// }
-
-
-// * {
-//     box-sizing: border-box;
-//     font-family: var(--font-primary);
-// }
 
 :host {
     flex: 1 1 auto;
@@ -102,6 +88,14 @@ hr {
     width: 100%;
 }
 
+.label-before {
+	line-height: 20px;
+	font-size: 12px;
+	top: -10px;
+	background: #fff;
+	padding: 0 6px;
+	left: 9px;
+}
 
 .label-before, .field input:valid + label::before, .field input:focus + label::before {
     line-height: 20px;
@@ -242,8 +236,14 @@ hr {
     opacity: 0.9;
 }
 
-.signbtn:hover {
+button:hover:enabled{
     background-color: var(--color-primary-dark);
+}
+button:focus {outline:0;}
+
+:disabled {
+    background: #dddddd;
+    cursor: default;
 }
 
 @media only screen and (max-width: 992px) {

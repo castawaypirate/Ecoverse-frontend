@@ -13,35 +13,35 @@
     <div class="container">
         <ul class="tab-group">
             <li class="tablink active"><a href="#signup">Create an account</a></li>
-            <!-- <div class="vl"></div>
-            <li class="tablink" onclick="openTab('sign-in-tab', this)"><a href="#signin">Sign in</a></li> -->
+            <div class="vl"></div>
+            <li class="tablink" onclick="openTab('sign-in-tab', this)"><a href="#signin">Sign in</a></li>
         </ul>
         <div id="sign-up-tab" class="tabcontent">
             <hr> 
             <form [formGroup]="userprofileForm" (ngSubmit)="onSubmit()">
                 <div class="con1">
                     <div class="field">
-                        <input type="text" autocomplete="off" id="usr" formControlName="username">
+                        <input type="text" required autocomplete="off" id="usr" formControlName="username">
                         <label for="usr" title="Username" data-title="Username"></label>
                     </div>
                     <div class="field">
-                        <input type="text" autocomplete="off" id="mail" formControlName="email">
+                        <input type="text" required autocomplete="off" id="mail" formControlName="email">
                         <label for="mail" title="Email" data-title="Email"></label>
                     </div>
                 </div>
 
                 <div class="con2">
                     <div class="field">
-                        <input type="password" autocomplete="off" id="psw" formControlName="password">
+                        <input [attr.type]="isPassword?'password':'text'" required autocomplete="off" id="psw" formControlName="password">
                         <label for="psw" title="Password" data-title="Password"></label>
                     </div>
                     
                     <div class="field" id="field4">
-                        <input type="password" autocomplete="off" id="conf" formControlName="confirm">
+                        <input [attr.type]="isPassword?'password':'text'" required autocomplete="off" id="conf" formControlName="confirm">
                         <label for="conf" title="Confirm" data-title="Confirm"></label>
                     </div>
                     
-                    <div class="eye slash" onclick="togglePW()">
+                    <div class="eye slash" (click)="togglePasswordVisibility()">
                         <div></div>
                         <div></div>
                     </div>
