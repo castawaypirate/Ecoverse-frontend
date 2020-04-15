@@ -14,12 +14,21 @@
                 <a routerLink="/contact">Contact</a>
             </li>
             <li class="menu-item" routerLinkActive="active">
-                <a routerLink="/sign">Login</a>
+                <a routerLink="/sign">Sign</a>
             </li>
         </ul>
     </nav>
 </div>
+
+
 <div class="header mobile">
+    <div #con class="con" (click)="toggleham(con)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+</div>
+<!-- <div class="header mobile">
     <input class="menu-toggle" id="menu-icon" type="checkbox" class="hidden" />
     <label class="hamburger" for="menu-icon">
         <span class="hamburger-icon"></span>
@@ -40,8 +49,8 @@
                 <a routerLink="/contact" routerLinkActive="active">Contact</a>
             </li>
             <li class="menu-item">
-                <a routerLink="/home" routerLinkActive="active">Login</a>
+                <a routerLink="/home" routerLinkActive="active">Sign</a>
             </li>
         </ul>
     </nav>
-</div>
+</div> -->

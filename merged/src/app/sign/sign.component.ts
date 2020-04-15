@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign.component.scss']
 })
 export class SignComponent implements OnInit {
-  isPassword: boolean=true;
-
+  isPassword = true;
+  show = true;
   constructor(private fb: FormBuilder,private router: Router) { }
 
-  public href: string = "";
+  //public href: string = "";
   userprofileForm = this.fb.group({
     username: ['',Validators.required],
     email: ['',Validators.required],
@@ -20,22 +20,46 @@ export class SignComponent implements OnInit {
     confirm: ['',Validators.required]
   });
 
+  memberprofileForm = this.fb.group({
+    username: ['',Validators.required],
+    password: ['',Validators.required]
+  });
+
+  showLogin() {
+    this.show = false;
+  }
+
+  showRegister() {
+    this.show = true;
+  }
+
   onSubmit() {
-    //console.warn(this.userprofileForm.value);
-    console.log(this.userprofileForm.valid);
+    console.log(this.userprofileForm.value);
+  }
+
+  onLogin() {
+    console.log(this.memberprofileForm.value);
   }
 
   ngOnInit(): void {
     console.log(this.router.url);
   }
 
-  togglePasswordVisibility(){
+  touch_highlight(event){
+    event.target.style.backgroundColor = 'gray';
+  }
 
+  highlight(event){
+    event.target.style.backgroundColor = 'gray';
+  }
+  togglePasswordVisibility(elem){
+    elem.target.style.backgroundColor = '';
     if(this.isPassword === true){
+        elem.target.style.backgroundImage = 'url(\'../../assets/images/eye.png\')';
         this.isPassword = false;
      } else{
+        elem.target.style.backgroundImage = 'url(\'../../assets/images/eye_slash.png\')';
         this.isPassword = true;
      }
-
-    }
+  }
 }

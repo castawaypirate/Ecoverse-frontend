@@ -12,4 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleham(elem){
+    elem.classList.toggle('change');
+  }
 }
