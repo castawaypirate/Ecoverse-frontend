@@ -6,13 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  showSidebar=false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleham(elem){
-    elem.classList.toggle('change');
+  toggleham(ham,sidenav){
+    ham.classList.toggle('change');
+    if(this.showSidebar){
+      sidenav.style.width="0";
+      this.showSidebar=false;
+    }else{
+      sidenav.style.width="250px";
+      this.showSidebar=true;
+    }
+    
   }
 }

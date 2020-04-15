@@ -22,11 +22,32 @@
 
 
 <div class="header mobile">
-    <div #con class="con" (click)="toggleham(con)">
+    <div #con class="con" (click)="toggleham(con,sidenav)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+</div>
+<div #sidenav class="sidenav">
+    <nav class="mmenu">
+        <ul class="menu">
+            <li class="menu-item">
+                <a routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li class="menu-item">
+                <a routerLink="/home" routerLinkActive="active">Announcements</a>
+            </li>
+            <li class="menu-item">
+                <a routerLink="/home" routerLinkActive="active">About us</a>
+            </li>
+            <li class="menu-item">
+                <a routerLink="/contact" routerLinkActive="active">Contact</a>
+            </li>
+            <li class="menu-item">
+                <a routerLink="/sign" routerLinkActive="active">Sign</a>
+            </li>
+        </ul>
+    </nav>
 </div>
 <!-- <div class="header mobile">
     <input class="menu-toggle" id="menu-icon" type="checkbox" class="hidden" />
