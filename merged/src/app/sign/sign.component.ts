@@ -45,20 +45,11 @@ export class SignComponent implements OnInit {
     console.log(this.router.url);
   }
 
-  touch_highlight(event){
-    event.target.style.backgroundColor = 'gray';
-  }
-
-  highlight(event){
-    event.target.style.backgroundColor = 'gray';
-  }
-  togglePasswordVisibility(elem){
-    elem.target.style.backgroundColor = '';
+  togglePW(elem){
+    elem.classList.toggle('slash');
     if(this.isPassword === true){
-        elem.target.style.backgroundImage = 'url(\'../../assets/images/eye.png\')';
         this.isPassword = false;
      } else{
-        elem.target.style.backgroundImage = 'url(\'../../assets/images/eye_slash.png\')';
         this.isPassword = true;
      }
   }

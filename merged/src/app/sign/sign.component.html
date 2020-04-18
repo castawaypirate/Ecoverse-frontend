@@ -29,7 +29,10 @@
                         <input [attr.type]="isPassword?'password':'text'" required autocomplete="off" id="conf" formControlName="confirm">
                         <label for="conf" title="Confirm" data-title="Confirm"></label>
                     </div>
-                    <div class="demo" (mouseup)="togglePasswordVisibility($event)" (mousedown)="highlight($event)" (touchstart)="touch_highlight($event)"></div>                    
+                    <div #eye class="eye slash" (click)="togglePW(eye)">
+                        <div></div>
+                        <div></div>
+                      </div>
                 </div>
             
                 <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>

@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
       sidenav.style.width="0";
       this.showSidebar=false;
     }else{
-      sidenav.style.width="250px";
+      sidenav.style.width="190px";
       this.showSidebar=true;
     }
     
