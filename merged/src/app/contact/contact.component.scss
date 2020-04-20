@@ -3,15 +3,16 @@
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
+    height: 100%
 }
 
 .main_box {
 
     position: relative;
-    padding : 0;
+    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: white;
+    width: 100%;
     margin: 0;
     height: 100%;
     flex: 1 1 auto;
@@ -30,15 +31,15 @@
     padding: 1rem;
     width: 475px;
     height: 400px ;
-    max-width: 500px;
-    position: absolute;
+    position: static;
     display: flex;
     flex-direction: column;
-    left: calc(50% - 232.5px);
-    bottom: calc(50% - 100px);
+    margin-left: calc(50% - 232.5px);
+    margin-top: 5rem;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 0 30px black;
+    z-index: 1;
 }
 
 .main_box .contact_window .text_field{
@@ -74,7 +75,7 @@
     left: 0;
 }
 .main_box .contact_window .social  a img{
-    position: absolute;
+    position: relative;
     object-fit: cover;
     margin: 0;
     padding: 0;
@@ -96,4 +97,36 @@
 }
 .main_box .contact_window .social a:nth-child(2){
     margin-left: 5%;
+}
+
+@media only screen and (max-width: 575px) {
+
+  .main_box .image{
+    display: none;
+  }
+
+  .main_box .contact_window{
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .main_box .contact_window .text_field h1{
+    font-size: 30px;
+  }
+  .main_box .contact_window .text_field p{
+    font-size: 20px;
+  }
+  .main_box .contact_window .social{
+    align-items: center;
+  }
+
+  .main_box .contact_window .social a{
+    margin-top: 10px;
+    width: 30%;
+    height: 30%;
+
+  }
 }
