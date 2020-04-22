@@ -1,0 +1,209 @@
+:host {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+.landing-content {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.landing-content .background-img {
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+
+.landing-content .message {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  color: var(--color-light);
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px black;
+}
+
+
+.landing-content .message .row{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.landing-content .message .row .item{
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+.landing-content .message .row .img{
+  max-width: 800px;
+}
+
+.landing-content .message .dots{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+
+}
+
+.landing-content .message .dots .dot {
+  height: 10px;
+  width: 10px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  animation: animate 1s infinite;
+}
+
+.landing-content .message .dots .dot:nth-child(2) {
+  animation: animate 1s infinite 250ms;
+}
+
+.landing-content .message .dots .dot:nth-child(3) {
+  animation: animate 1s infinite 500ms;
+}
+
+.landing-content .message .dots .dot:nth-child(1) {
+  margin-top: 30px;
+}
+
+.landing-content .message .dots .dot:nth-child(3) {
+  bottom: 0;
+}
+
+@keyframes animate {
+  0% { transform: scale(1); }
+  50% { opacity: .3; transform: scale(2); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+@keyframes arrow-move {
+  from {
+    bottom: 7%;
+  }
+  to {
+    bottom: 5%;
+  }
+}
+
+
+.splitter{
+  height: 30px;
+  background-color: black;
+  width: 100%;
+  box-shadow: 0px 3px 5px black;
+  z-index: 1;
+}
+
+.box {
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  flex: 1 1 auto;
+
+}
+
+.box .img{
+  width: 25%;
+  display: flex;
+  position: relative;
+  object-fit: contain;
+  max-height: 100vh;
+}
+
+.box .text{
+  padding: 1rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.box *:nth-child(1){
+  float: left;
+  box-shadow: 3px 3px 5px black;
+}
+
+.box *:nth-child(3){
+  float: right;
+  box-shadow: -3px 3px 5px black;
+}
+
+@media only screen and (max-width: 1410px){
+  .landing-content .message{
+    font-size: 2rem;
+  }
+  .landing-content .message .img{
+    width: 500px;
+  }
+  .landing-content .message .dots .dot{
+    height: 6px;
+    width:  6px;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .landing-content .message{
+    font-size: 1.5rem;
+  }
+  .landing-content .message .img{
+    width: 350px;
+  }
+  .landing-content .message .row{
+    padding: 0;
+  }
+  .landing-content .message .dots .dot{
+    height: 5px;
+    width:  5px;
+  }
+
+}
+
+@media only screen and (max-width: 715px) {
+  .landing-content .message {
+    font-size: 1rem;
+  }
+  .landing-content .message .img {
+    width: 300px;
+  }
+  .landing-content .message .row {
+    padding: 0;
+  }
+  .landing-content .message .dots {
+    display: none;
+  }
+
+  .box .img {
+    display: none;
+  }
+  .box .text {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 515px) {
+    .landing-content .message {
+      font-size: 0.8rem;
+    }
+    .landing-content .message .img {
+      width: 200px;
+    }
+    .box{
+      font-size: 1rem;
+    }
+  }
+}

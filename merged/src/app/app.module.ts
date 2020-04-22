@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SignComponent } from './sign/sign.component';
     HeaderComponent,
     FooterComponent,
     ContactComponent,
-    SignComponent
+    SignComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
