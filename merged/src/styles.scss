@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+a[href] {
+  color: var(--color-primary-dark);
+}
+
 img {
   max-width: 100%;
 }
@@ -38,9 +42,13 @@ img {
   background-color: var(--color-background);
   transition: background-color 300ms ease;
   cursor: pointer;
-  color: var(--color);
+  color: var(--color) !important;
   border: none;
   border-radius: 5px;
+}
+
+.row {
+  display: flex;
 }
 
 .btn:hover {
