@@ -86,3 +86,27 @@ img {
   padding: 2rem 1rem;
   /* background-color: white; */
 }
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 991px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  .card .card-img {
+    order: 0;
+  }
+  .card .card-body {
+    order: 1;
+  }
+}

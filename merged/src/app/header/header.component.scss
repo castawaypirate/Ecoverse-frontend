@@ -33,6 +33,7 @@
   display: block;
   position: relative;
   transition: color 300ms ease;
+  outline: none;
 }
 
 .menu .menu-item a::after {
@@ -48,12 +49,12 @@
   background-color: var(--color-info);
 }
 
-.menu .menu-item a:hover {
+.menu .menu-item a:hover, .menu .menu-item a:focus {
   color: white;
   display: block;
 }
 
-.menu .menu-item a:hover::after {
+.menu .menu-item a:hover::after, .menu .menu-item a:focus::after {
   transform: scale(1, 1);
 }
 
