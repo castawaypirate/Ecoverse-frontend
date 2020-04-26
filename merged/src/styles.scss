@@ -78,12 +78,13 @@ img {
 }
 
 .card .card-img {
-  width: 100%;
+  width: 30%;
   max-width: 400px;
   height: auto;
 }
 
 .card .card-body {
+  width: 70%;
   padding: 2rem;
   color: black;
 }
@@ -112,9 +113,11 @@ img {
     flex-direction: column;
   }
   .card .card-img {
+    width: 100%;
     order: 0;
   }
   .card .card-body {
+    width: 100%;
     order: 1;
   }
 }
