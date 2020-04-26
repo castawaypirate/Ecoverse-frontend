@@ -1,3 +1,4 @@
+import { Meta, Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class SignComponent implements OnInit {
   isPassword = true;
   show = true;
-  constructor(private fb: FormBuilder,private router: Router) { }
+  constructor(private fb: FormBuilder,private router: Router, private title: Title, private meta: Meta) { }
 
   //public href: string = "";
   userprofileForm = this.fb.group({
@@ -43,6 +44,8 @@ export class SignComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.router.url);
+    this.title.setTitle('Sign-in / Register');
+    this.meta.updateTag({ name: 'description', content: 'Sign-in , Login , Register' });
   }
 
   togglePW(elem){

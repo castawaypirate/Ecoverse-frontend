@@ -1,4 +1,7 @@
+import { Meta, Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title , private meta: Meta) { }
 
   ngOnInit(): void {
+    this.title.setTitle('Contact Us');
+    this.meta.updateTag({ name: 'description', content: 'Contact Information' });
   }
 
 }
