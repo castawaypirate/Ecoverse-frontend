@@ -1,10 +1,10 @@
-import {NgModule, OnInit} from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
-import {AboutComponent} from "./about/about.component";
-import {AnnouncementsComponent} from './announcements/announcements.component';
+import { AboutComponent } from "./about/about.component";
+import { NewsComponent } from './news/news.component';
 
 
 const routes: Routes = [
@@ -17,7 +17,7 @@ const routes: Routes = [
     component: ContactComponent,
   },
   {
-    path : 'sign',
+    path: 'sign',
     component: SignComponent,
   },
   {
@@ -25,8 +25,8 @@ const routes: Routes = [
     component: AboutComponent,
   },
   {
-    path: 'announcements',
-    component: AnnouncementsComponent,
+    path: 'news',
+    component: NewsComponent,
   },
 
   {
@@ -45,5 +45,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule{}
-
+export class AppRoutingModule { }

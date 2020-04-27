@@ -2,11 +2,11 @@ import { Meta, Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-announcements',
-  templateUrl: './announcements.component.html',
-  styleUrls: ['./announcements.component.scss']
+  selector: 'app-news',
+  templateUrl: './news.component.html',
+  styleUrls: ['./news.component.scss']
 })
-export class AnnouncementsComponent implements OnInit {
+export class NewsComponent implements OnInit {
 
   constructor(private title: Title, private meta: Meta) { }
 
