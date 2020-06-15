@@ -1,0 +1,26 @@
+<div class="usercontainer">
+  <div class="column">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..\assets\images\profile.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p>Apollon Sykiotis</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <div #tex id="tex" [contentEditable]="false">
+          This text can be edited by the user.
+        </div>
+        <i (click)="edit(tex)" class="fa fa-pen"></i>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="cardinfo" style="width: 40rem;">
+      <div class="cardinfo-body">
+        <p>News</p>
+      </div>
+    </div>
+  </div>
+</div>
+

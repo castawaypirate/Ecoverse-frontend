@@ -1,0 +1,96 @@
+$linkcolour: var(--color-secondary);
+
+.headerpanel {
+  position: relative;
+  width: 100%;
+  color: white;
+  height: 70px;
+  background-color: var(--color-secondary);
+  box-shadow: 2px 2px 5px gray;
+  list-style-type: none;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.usercollapse {
+  padding-top: 0.5rem;
+}
+
+.homebtn {
+  margin-bottom: 1rem;
+}
+
+button:focus {outline:0;}
+
+.user {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+}
+
+.user:hover {
+  color:var(--color-dark);
+  border: none;
+  outline: none;
+}
+
+.user.active {
+  color:var(--color-dark);
+  border: none;
+  outline: none;
+  background-color: var(--color-secondary-dark);
+  border-radius: 6px 6px 0 0;
+
+}
+
+.content {
+  padding: 5px 18px 18px 18px;
+  display: none;
+  overflow: hidden;
+  background-color: var(--color-secondary-dark);
+  border-radius: 0 0 6px 6px;
+  width:100%;
+  font-weight: bolder;
+}
+
+.iconify {
+  position: relative;
+  top: 3px;
+
+}
+
+.fa-caret-down {
+  padding-left: 5px;
+}
+
+.btn {
+  background-color: var(--color-secondary);
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.headerpanel-item {
+  padding: 0.8rem;
+}
+
+
+

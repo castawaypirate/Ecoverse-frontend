@@ -5,6 +5,9 @@ import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
 import { AboutComponent } from "./about/about.component";
 import { NewsComponent } from './news/news.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { HeaderpanelComponent } from './headerpanel/headerpanel.component';
+
 
 
 const routes: Routes = [
@@ -28,7 +31,14 @@ const routes: Routes = [
     path: 'news',
     component: NewsComponent,
   },
-
+  {
+    path: 'userprofile',
+    component: UserprofileComponent,
+  },
+  {
+    path: 'headerpanel',
+    component: HeaderpanelComponent,
+  },
   {
     path: '',
     redirectTo: '/home',
