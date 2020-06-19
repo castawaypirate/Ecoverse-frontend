@@ -5,6 +5,10 @@ import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
 import { AboutComponent } from "./about/about.component";
 import { NewsComponent } from './news/news.component';
+import { CreatePostComponent} from "./create-post/create-post.component";
+import { PostComponent} from "./post/post.component";
+import {UserPostsComponent} from "./user-posts/user-posts.component";
+
 
 
 const routes: Routes = [
@@ -27,6 +31,18 @@ const routes: Routes = [
   {
     path: 'news',
     component: NewsComponent,
+  },
+  {
+    path: 'create_post',
+    component: CreatePostComponent,
+  },
+  {
+    path: 'post',
+    component: PostComponent,
+  },
+  {
+    path:'user_posts',
+    component: UserPostsComponent,
   },
 
   {

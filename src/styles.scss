@@ -26,6 +26,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 a[href] {
@@ -120,4 +121,16 @@ img {
     width: 100%;
     order: 1;
   }
+}
+
+.pagination{
+  display: flex;
+}
+.pagination li{
+  color: #00a8e6;
+  margin-right: 20px;
+}
+ul{
+  list-style: none;
+  padding-inline-start: 0;
 }
