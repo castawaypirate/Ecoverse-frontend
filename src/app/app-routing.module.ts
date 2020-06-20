@@ -8,6 +8,10 @@ import { NewsComponent } from './news/news.component';
 import { CreatePostComponent} from "./create-post/create-post.component";
 import { PostComponent} from "./post/post.component";
 import {UserPostsComponent} from "./user-posts/user-posts.component";
+import { CreateTeamComponent } from './team/create-team/create-team.component';
+import { EditTeamComponent } from './team/edit-team/edit-team.component';
+import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
+import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
 
 
 
@@ -43,6 +47,23 @@ const routes: Routes = [
   {
     path:'user_posts',
     component: UserPostsComponent,
+  },
+  {
+    path:'team',
+    children: [
+      {
+        path: '',
+        component: EditTeamsComponent
+      },
+      {
+        path: 'create',
+        component: CreateTeamComponent
+      },
+      {
+        path: 'edit/:id',
+        component: EditTeamComponent
+      }
+    ]
   },
 
   {

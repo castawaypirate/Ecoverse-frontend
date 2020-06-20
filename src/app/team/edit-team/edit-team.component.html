@@ -1,0 +1,31 @@
+<div class="whole">
+  <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+    <div class="main_box">
+      <div class="title">
+        <b style="font-size: 20px">Add team title</b>
+        <input type="text" id="title" placeholder="Enter title here" formControlName="name">
+        <label for="title" title="Title" data-title="Title"></label>
+      </div>
+
+      <div class="content">
+        <button><img src="../../assets/images/pic.png"> Add Recognizable Image</button>
+        <b style="font-size: 20px">Team Description</b>
+        <textarea formControlName="description"></textarea>
+      </div>
+      <div class="members">
+        <select formControlName="members" (select)="selectUser()">
+          <option *ngFor="let user of users">{{ user.name }}</option>
+        </select>
+      </div>
+      <div class="publish">
+        <b>Publish</b>
+        <div class="public">
+          <img src="https://img.icons8.com/material-sharp/24/000000/visible.png" style="width: 20px; height: 20px;">
+          <p style="margin-left: 8px">Public:</p>
+          <input type="checkbox" formControlName="public">
+        </div>
+        <button type="submit">Save</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -16,6 +16,10 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { PostComponent } from './post/post.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { JwPaginationModule } from 'jw-angular-pagination';
+import { CreateTeamComponent } from './team/create-team/create-team.component';
+import { EditTeamComponent } from './team/edit-team/edit-team.component';
+import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
+import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { JwPaginationModule } from 'jw-angular-pagination';
     NewsComponent,
     CreatePostComponent,
     PostComponent,
-    UserPostsComponent
+    UserPostsComponent,
+    CreateTeamComponent,
+    EditTeamComponent,
+    ShowTeamsComponent,
+    EditTeamsComponent
   ],
   imports: [
     BrowserModule,
