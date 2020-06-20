@@ -19,6 +19,10 @@ export class TeamService {
   constructor(private http: HttpClient) {
   }
 
+  getEditTeam(teamId) {
+    return this.http.get<Team>(this.url + '/' + teamId + '/edit', this.options);
+  }
+
   getTeam(teamId) {
     return this.http.get<Team>(this.url + '/' + teamId, this.options);
   }
@@ -43,8 +47,8 @@ export class TeamService {
     return this.http.delete<Team>(this.url + '/' + teamId);
   }
 
-  addMember(teamId, userId) {
-    return this.http.post<any>(this.url + '/' + teamId + '/members/create', {'user_id': userId});
+  acceptMember(teamId, userId) {
+    return this.http.post<any>(this.url + '/' + teamId + '/members/' + userId + '/accept_member', [], this.options);
   }
 
   addMembers(teamId, userIds) {
@@ -56,6 +60,6 @@ export class TeamService {
   }
 
   removeMember(teamId, memberId) {
-    return this.http.delete<any>(this.url + '/' + teamId + '/members/' + memberId);
+    return this.http.delete<any>(this.url + '/' + teamId + '/members/' + memberId, this.options);
   }
 }

@@ -13,9 +13,19 @@
         <textarea formControlName="description"></textarea>
       </div>
       <div class="members">
-        <select formControlName="members" (select)="selectUser()">
-          <option *ngFor="let user of users">{{ user.name }}</option>
-        </select>
+          <label>Members</label>
+          <ul formArrayName="members">
+            <li *ngFor="let member of members; index as i">{{ member.data.name }} 
+              <button (click)="removeMember(i, member.id)"><span class="fas fa-times"></span>Remove member</button></li>
+          </ul>
+      </div>
+      <div class="applicants">
+        <label>Applicants</label>
+          <ul formArrayName="pending_members">
+            <li *ngFor="let member of pending_members; index as i">{{ member.data.email }}
+              <button (click)="acceptMember(i, member.id)"><span class="fas fa-times"></span>Accept member</button>
+              <button (click)="removeApplicant(i, member.id)"><span class="fas fa-times"></span>Reject member</button></li>
+          </ul>
       </div>
       <div class="publish">
         <b>Publish</b>

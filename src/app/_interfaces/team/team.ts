@@ -7,6 +7,7 @@ export interface Team {
     description: String,
     public: boolean,
     members: TeamMember[],
+    pending_members: TeamMember[],
     posts: IPost[],
     created_at: Date,
     updated_at: Date

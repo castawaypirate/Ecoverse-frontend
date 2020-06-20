@@ -22,10 +22,6 @@ export class CreateTeamComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectUser(): void {
-    
-  }
-
   onSubmit(): void {
     if (this.teamForm.valid) {
       this.teamSrv.createTeam(this.teamForm.value)

@@ -12,11 +12,6 @@
         <b style="font-size: 20px">Team Description</b>
         <textarea formControlName="description"></textarea>
       </div>
-      <div class="members">
-        <select formControlName="members" (select)="selectUser()">
-          <option *ngFor="let user of users">{{ user.name }}</option>
-        </select>
-      </div>
       <div class="publish">
         <b>Publish</b>
         <div class="public">
