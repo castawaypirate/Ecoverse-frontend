@@ -1,22 +1,48 @@
 <div class="usercontainer">
   <div class="column">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 25rem;">
       <img class="card-img-top" src="..\assets\images\profile.jpg" alt="Card image cap">
       <div class="card-body">
-        <p>Apollon Sykiotis</p>
+        <form [formGroup]="userForm">
+          <input class="data" style="width: 100% !important;" type="text" placeholder="username" [readOnly]="editable" formControlName="username">
+        </form>
       </div>
     </div>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 25rem;">
       <div class="card-body">
-        <div #tex id="tex" [contentEditable]="false">
-          This text can be edited by the user.
-        </div>
-        <i (click)="edit(tex)" class="fa fa-pen"></i>
+        <form [formGroup]="profileForm">
+          <div class="field">
+            <label class="lab" for="name">First Name : </label>
+            <input class="data" type="text" placeholder="first name" [readOnly]="editable" formControlName="name"><br>
+          </div>
+          <div class="field">
+            <label class="lab" for="surname">Last Name : </label>
+            <input class="data" type="text" placeholder="last name" [readOnly]="editable" formControlName="surname"><br>
+          </div>
+          <div class="field">
+            <label class="lab" for="email">Email : </label>
+            <input class="data" type="text" placeholder="email" [readOnly]="editable" formControlName="email"><br>
+          </div>
+          <div class="field">
+            <label class="lab" for="location">Location : </label>
+            <input class="data" type="text" placeholder="location" [readOnly]="editable" formControlName="location"><br>
+          </div>
+          <div class="field">
+            <label class="lab" for="birthday">Birthday : </label>
+            <input class="data" type="text" placeholder="birthday" [readOnly]="editable" formControlName="birth_date"><br>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card" style="width: 25rem;">
+      <div class="card-body">
+        <button #ed (click)="edit(ed)" class="btn btn-secondary">Edit</button>
+        <button (click)="delete()" class="btn btn-primary">Delete</button>
       </div>
     </div>
   </div>
   <div class="column">
-    <div class="cardinfo" style="width: 40rem;">
+    <div class="cardinfo">
       <div class="cardinfo-body">
         <p>News</p>
       </div>

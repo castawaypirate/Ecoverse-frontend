@@ -27,7 +27,7 @@ $linkcolour: var(--color-secondary);
 
 button:focus {outline:0;}
 
-.user {
+.userbtn {
   background-color: transparent;
   border: none;
   color: white;
@@ -38,21 +38,21 @@ button:focus {outline:0;}
   width: 100%;
   text-align: left;
   outline: none;
+  margin-right: 20px;
 }
 
-.user:hover {
+.userbtn:hover {
   color:var(--color-dark);
   border: none;
   outline: none;
 }
 
-.user.active {
+.userbtn.active {
   color:var(--color-dark);
   border: none;
   outline: none;
   background-color: var(--color-secondary-dark);
   border-radius: 6px 6px 0 0;
-
 }
 
 .content {

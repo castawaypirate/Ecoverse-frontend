@@ -3,9 +3,6 @@ import { Component, OnInit} from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IUser } from '../_interfaces/user';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { UserService } from '../_services/user.service';
 import { AuthService } from '../_services/auth.service';
 import { IAuth } from '../_interfaces/auth';
@@ -23,7 +20,7 @@ export class SignComponent implements OnInit {
   public auth: IAuth;
 
 
-  constructor(private fb: FormBuilder,private router: Router, private title: Title, private meta: Meta, private _userService: UserService, private _autservice: AuthService) { }
+  constructor(private fb: FormBuilder,private router: Router, private title: Title, private meta: Meta, private _userService: UserService, private _authService: AuthService) { }
 
   userprofileForm = this.fb.group({
     username: ['',Validators.required],
@@ -49,19 +46,25 @@ export class SignComponent implements OnInit {
   onSubmit() {
     this.user = this.userprofileForm.value;
     this.user.role="testrole";
-    console.log(this.user);
-    this._userService.addUser(this.user).subscribe(user=>{alert("Succesfully Added Product details")});
+    this._userService.addUser(this.user).subscribe(auth=>{this.auth=auth,
+      localStorage.setItem('userToken',
+      this.auth.accessToken),
+      this.router.navigate(['/userprofile'])});
   }
 
   onLogin() {
-    this._autservice.login(this.memberprofileForm.controls.username.value,this.memberprofileForm.controls.password.value).subscribe(auth=>{this.auth=auth,console.log(this.auth.accessToken)});
+    this._authService.login(this.memberprofileForm.controls.username.value,this.memberprofileForm.controls.password.value).subscribe(
+      auth=>{this.auth=auth,
+        localStorage.setItem('userToken',
+        this.auth.accessToken),
+        this.router.navigate(['/userprofile'])},
+        err => {console.log(err)});
   }
 
   ngOnInit(): void {
     console.log(this.router.url);
     this.title.setTitle('Sign-in / Register');
     this.meta.updateTag({ name: 'description', content: 'Sign-in , Login , Register' });
-    //this._userService.getUsers().subscribe(user=>{this.user=user,this.memberprofileForm.setValue({username:this.user.username,password:this.user.role})});
 
   }
 

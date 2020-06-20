@@ -6,9 +6,9 @@
       </li>
     </div>
     <div class="usercollapse">
-      <button #user (click)="expand(user,content)" type="button" class="user">Username<i class="fa fa-caret-down"></i></button>
+        <button #userbtn (click)="expand(userbtn,content)" type="button" class="userbtn">{{text}}<i class="fa fa-caret-down"></i></button>
       <div #content class="content">
-        <a routerLink="/"><span class="iconify" data-icon="fa-solid:sign-out-alt" data-inline="false"></span> Logout</a>
+        <a (click)="logout()" routerLink="/"><span class="iconify" data-icon="fa-solid:sign-out-alt" data-inline="false"></span> Logout</a>
       </div>
     </div>
   </div>

@@ -7,6 +7,8 @@ import { AboutComponent } from "./about/about.component";
 import { NewsComponent } from './news/news.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { HeaderpanelComponent } from './headerpanel/headerpanel.component';
+import { AuthGuard } from './_helpers/auth.guard';
+import { SignGuard } from './_helpers/sign.guard';
 
 
 
@@ -21,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'sign',
-    component: SignComponent,
+    component: SignComponent,canActivate:[SignGuard],
   },
   {
     path: 'about',
@@ -33,11 +35,11 @@ const routes: Routes = [
   },
   {
     path: 'userprofile',
-    component: UserprofileComponent,
+    component: UserprofileComponent,canActivate:[AuthGuard],
   },
   {
     path: 'headerpanel',
-    component: HeaderpanelComponent,
+    component: HeaderpanelComponent,canActivate:[AuthGuard],
   },
   {
     path: '',

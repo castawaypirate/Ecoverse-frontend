@@ -1,3 +1,3 @@
 export interface IAuth {
-  accessToken: String
+  accessToken: string
 }

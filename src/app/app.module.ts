@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,9 @@ import { AuthService } from './_services/auth.service';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { HeaderpanelComponent } from './headerpanel/headerpanel.component';
 import { SidebarpanelComponent } from './sidebarpanel/sidebarpanel.component';
-
+import { AuthInterceptor } from './_helpers/auth.interceptor'
+import { AuthGuard } from './_helpers/auth.guard';
+import { SignGuard } from './_helpers/sign.guard';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,14 @@ import { SidebarpanelComponent } from './sidebarpanel/sidebarpanel.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule
+    ],
+  providers: [
+    UserService,
+    AuthService,
+    AuthGuard,
+    SignGuard,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ],
-  providers: [UserService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
