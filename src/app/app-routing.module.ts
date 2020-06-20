@@ -12,6 +12,7 @@ import { CreateTeamComponent } from './team/create-team/create-team.component';
 import { EditTeamComponent } from './team/edit-team/edit-team.component';
 import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
 import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
+import { SingleTeamComponent } from './team/single-team/single-team.component';
 
 
 
@@ -49,7 +50,7 @@ const routes: Routes = [
     component: UserPostsComponent,
   },
   {
-    path:'team',
+    path:'admin_team',
     children: [
       {
         path: '',
@@ -63,6 +64,19 @@ const routes: Routes = [
         path: 'edit/:id',
         component: EditTeamComponent
       }
+    ]
+  },
+  {
+    path:'team',
+    children: [
+      {
+        path: '',
+        component: ShowTeamsComponent
+      },
+      {
+        path: ':id',
+        component: SingleTeamComponent
+      },
     ]
   },
 

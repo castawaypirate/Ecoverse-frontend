@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,6 +20,7 @@ import { CreateTeamComponent } from './team/create-team/create-team.component';
 import { EditTeamComponent } from './team/edit-team/edit-team.component';
 import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
 import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
+import { SingleTeamComponent } from './team/single-team/single-team.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
     CreateTeamComponent,
     EditTeamComponent,
     ShowTeamsComponent,
-    EditTeamsComponent
+    EditTeamsComponent,
+    SingleTeamComponent
   ],
   imports: [
     BrowserModule,

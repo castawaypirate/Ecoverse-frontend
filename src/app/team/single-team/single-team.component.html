@@ -1,0 +1,9 @@
+<h1>{{ team?.name }}</h1>
+<p>{{ team?.description }} </p>
+
+<ul>
+    <li *ngFor="let post of team?.posts">
+        <span>{{ post.author_id }}</span>
+        <p>{{ post.content }}</p>
+    </li>
+</ul>
