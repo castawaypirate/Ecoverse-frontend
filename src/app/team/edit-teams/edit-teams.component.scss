@@ -28,6 +28,12 @@ ul {
 
 .fa-pen {
   margin-left: 10px;
+  color: black;
+}
+
+.fa-pen:hover {
+  cursor: pointer;
+  color: var(--color-primary-dark);
 }
 
 .remove:hover {
