@@ -1,5 +1,5 @@
 import { TeamMember } from './team-member';
-import { IPost } from 'src/app/create-post/ipost';
+import { IPost } from 'src/app/admin/posts/create-post/ipost';
 
 export interface Team {
     id: Number,

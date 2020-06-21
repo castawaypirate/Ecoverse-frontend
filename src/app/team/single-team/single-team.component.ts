@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from 'src/app/_interfaces/team/team';
-import { IPost } from 'src/app/create-post/ipost';
+import { IPost } from 'src/app/admin/posts/create-post/ipost';
 import { TeamService } from '../team.service';
 import { ActivatedRoute } from '@angular/router';
 
