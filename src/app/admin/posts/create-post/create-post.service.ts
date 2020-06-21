@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
@@ -21,15 +21,4 @@ export class CreatePostService {
 
   }
 
-  public getPostById(ID) {
-    let id: number = ID;
-    let endPoints = "/" + id;
-    this.http.get(this.url + endPoints).subscribe(data => {
-      console.log(data);
-    });
-  }
-  deletePost(id){
-    let endPoints = "/" + id;
-    return this.http.delete(this.url)
-  }
 }

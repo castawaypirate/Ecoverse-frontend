@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserPostsService} from "./user-posts.service";
 import {IPost} from "../create-post/ipost";
+import {Meta, Title} from "@angular/platform-browser";
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,13 +15,21 @@ export class UserPostsComponent implements OnInit {
   public posts = [];
   public pageOfPosts: Array<any>;
 
-  constructor(private router : Router , private srvc: UserPostsService) { }
+  constructor(private srvc: UserPostsService, private title: Title , private meta: Meta, private router: Router) { }
 
   ngOnInit(): void {
+    this.title.setTitle('Your Posts');
+    this.meta.updateTag({ name: 'description', content: 'Users list of posts' });
     this.srvc.getPosts().subscribe( data => {
-      console.log(data)
       this.posts = data;
     });
+  }
+
+  deletePost(id){
+    this.srvc.deletePost(id).subscribe(data => {
+      this.router.navigate(['/admin/posts']);
+      console.log("success");
+    })
   }
 
   onChangePage(pageOfPosts: Array<any>) {

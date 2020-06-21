@@ -16,6 +16,7 @@ import { CreatePostComponent } from './admin/posts/create-post/create-post.compo
 import { PostComponent } from './admin/posts/post/post.component';
 import { UserPostsComponent } from './admin/posts/user-posts/user-posts.component';
 import { JwPaginationModule } from 'jw-angular-pagination';
+import { EditPostComponent } from './admin/posts/edit-post/edit-post.component';
 import { CreateTeamComponent } from './team/create-team/create-team.component';
 import { EditTeamComponent } from './team/edit-team/edit-team.component';
 import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
@@ -31,6 +32,7 @@ import { AuthGuard } from './_helpers/auth.guard';
 import { SignGuard } from './_helpers/sign.guard';
 import { AdminComponent } from './admin/admin.component';
 import { PublicComponent } from './public/public.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -47,13 +49,15 @@ import { PublicComponent } from './public/public.component';
     CreatePostComponent,
     PostComponent,
     UserPostsComponent,
+    EditPostComponent,
     CreateTeamComponent,
     EditTeamComponent,
     ShowTeamsComponent,
     EditTeamsComponent,
     SingleTeamComponent,
     AdminComponent,
-    PublicComponent
+    PublicComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,

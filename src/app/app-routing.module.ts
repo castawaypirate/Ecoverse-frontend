@@ -1,10 +1,11 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
 import { AboutComponent } from "./about/about.component";
 import { NewsComponent } from './news/news.component';
+import {EditPostComponent} from "./admin/posts/edit-post/edit-post.component";
 import { UserprofileComponent } from './admin/userprofile/userprofile.component';
 import { HeaderpanelComponent } from './admin/headerpanel/headerpanel.component';
 import { AuthGuard } from './_helpers/auth.guard';
@@ -19,6 +20,8 @@ import { EditTeamComponent } from './team/edit-team/edit-team.component';
 import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
 import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
 import { SingleTeamComponent } from './team/single-team/single-team.component';
+import { FeedComponent } from './feed/feed.component';
+
 
 
 const routes: Routes = [
@@ -48,6 +51,10 @@ const routes: Routes = [
           component: NewsComponent,
         },
         {
+          path: 'post/:id',
+          component: PostComponent,
+        },
+        {
           path:'teams',
           children: [
             {
@@ -60,6 +67,10 @@ const routes: Routes = [
             },
           ]
         },
+        {
+          path: 'feed',
+          component: FeedComponent
+        }
       ]
   },
 
@@ -89,7 +100,7 @@ const routes: Routes = [
           },
           {
             path: ':id',
-            component: PostComponent,
+            component: EditPostComponent,
           }
         ]
       },

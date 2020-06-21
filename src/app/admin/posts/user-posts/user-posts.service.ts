@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import {IPost} from "../create-post/ipost";
 import { environment } from 'src/environments/environment';
@@ -20,5 +20,9 @@ export class UserPostsService {
 
   getPosts(){
     return this.http.get<IPost[]>(this.url + '/author');
+  }
+
+  deletePost(id){
+    return this.http.delete(this.url + '/' + id);
   }
 }

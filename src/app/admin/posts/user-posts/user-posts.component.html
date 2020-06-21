@@ -6,7 +6,7 @@
     </div>
     <a routerLink="/post/{{post.id}}"><i class="fa fa-eye"></i></a>
     <a [routerLink]="post.id"><i class="fa fa-pen"></i></a>
-    <a class="remove"><i class="fa fa-trash"></i></a>
+    <a class="remove" (click)="deletePost(post.id)"><i class="fa fa-trash"></i></a>
   </div>
   <jw-pagination [items]="posts" (changePage)="onChangePage($event)"></jw-pagination>
 
