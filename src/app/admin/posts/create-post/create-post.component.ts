@@ -18,6 +18,7 @@ export class CreatePostComponent implements OnInit {
   postForm = this.fb.group({
     title:['', Validators.required],
     content:['', Validators.required],
+    image: null,
     public: 0
   })
 
@@ -30,6 +31,23 @@ export class CreatePostComponent implements OnInit {
     this.post = this.postForm.value;
     console.log(this.post);
     this.postService.addPost(this.post).subscribe(post=>{alert("Successfully Added Post")});
+  }
+
+  triggerUpload(fileInput) {
+    fileInput.click();
+  }
+
+  fileUpload(fileInput) {
+    let reader = new FileReader();
+
+    if (fileInput.files && fileInput.files.length) {
+      const [file] = fileInput.files;
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        this.postForm.controls.image.setValue(file);
+      }
+    }
   }
 
 }
