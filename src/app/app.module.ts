@@ -27,6 +27,7 @@ import { AuthGuard } from './_helpers/auth.guard';
 import { SignGuard } from './_helpers/sign.guard';
 import { AdminComponent } from './admin/admin.component';
 import { PublicComponent } from './public/public.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PublicComponent } from './public/public.component';
     PostComponent,
     UserPostsComponent,
     AdminComponent,
-    PublicComponent
+    PublicComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,

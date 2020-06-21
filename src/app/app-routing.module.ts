@@ -1,4 +1,4 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
@@ -14,6 +14,7 @@ import { PostComponent } from "./admin/posts/post/post.component";
 import { UserPostsComponent } from "./admin/posts/user-posts/user-posts.component";
 import { AdminComponent } from './admin/admin.component';
 import { PublicComponent } from './public/public.component';
+import { FeedComponent } from './feed/feed.component';
 
 
 
@@ -42,6 +43,10 @@ const routes: Routes = [
         {
           path: 'news',
           component: NewsComponent,
+        },
+        {
+          path: 'feed',
+          component: FeedComponent
         }
       ]
   },
