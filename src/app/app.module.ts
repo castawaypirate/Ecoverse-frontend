@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,15 @@ import { PostComponent } from './post/post.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { JwPaginationModule } from 'jw-angular-pagination';
 
+import { UserService } from './_services/user.service';
+import { AuthService } from './_services/auth.service';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { HeaderpanelComponent } from './headerpanel/headerpanel.component';
+import { SidebarpanelComponent } from './sidebarpanel/sidebarpanel.component';
+import { AuthInterceptor } from './_helpers/auth.interceptor'
+import { AuthGuard } from './_helpers/auth.guard';
+import { SignGuard } from './_helpers/sign.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +36,9 @@ import { JwPaginationModule } from 'jw-angular-pagination';
     SignComponent,
     AboutComponent,
     NewsComponent,
+    UserprofileComponent,
+    HeaderpanelComponent,
+    SidebarpanelComponent,
     CreatePostComponent,
     PostComponent,
     UserPostsComponent
@@ -35,10 +47,17 @@ import { JwPaginationModule } from 'jw-angular-pagination';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule
+    ],
+  providers: [
+    UserService,
+    AuthService,
+    AuthGuard,
+    SignGuard,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     HttpClientModule,
     JwPaginationModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

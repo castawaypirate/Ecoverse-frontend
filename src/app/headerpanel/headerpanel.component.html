@@ -1,0 +1,15 @@
+<nav class="headerpanel pc">
+  <div class="container-header">
+    <div class="homebtn">
+      <li class="headerpanel-item">
+        <a routerLink="/home"><button class="btn"><i class="fa fa-home"></i></button></a>
+      </li>
+    </div>
+    <div class="usercollapse">
+        <button #userbtn (click)="expand(userbtn,content)" type="button" class="userbtn">{{text}}<i class="fa fa-caret-down"></i></button>
+      <div #content class="content">
+        <a (click)="logout()" routerLink="/"><span class="iconify" data-icon="fa-solid:sign-out-alt" data-inline="false"></span> Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
