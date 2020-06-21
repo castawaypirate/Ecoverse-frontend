@@ -14,12 +14,30 @@ export class CreateTeamComponent implements OnInit {
     name: ['', Validators.required],
     description: ['', Validators.required],
     public: [1, Validators.required],
-    members: ['']
+    members: [''],
+    image: null
   });
 
   constructor(private fb: FormBuilder, private teamSrv: TeamService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  triggerUpload(fileInput) {
+    fileInput.click();
+  }
+
+  fileUpload(fileInput) {
+    let reader = new FileReader();
+
+    if (fileInput.files && fileInput.files.length) {
+      const [file] = fileInput.files;
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        this.teamForm.controls.image.setValue(file);
+      }
+    }
   }
 
   onSubmit(): void {
