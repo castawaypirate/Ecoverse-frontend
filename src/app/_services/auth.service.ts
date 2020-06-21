@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
+import { map, catchError, tap } from 'rxjs/operators';
 import { IAuth } from '../_interfaces/auth';
 
 
@@ -14,8 +13,8 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<IAuth>{
-    return this.http.post<any>("http://localhost:8000/api/users/login",{username,password}).map(response => response.json())
-    .catch((e: any) => Observable.throw(this.errorHandler(e)));
+    return this.http.post<any>("http://localhost:8000/api/users/login",{username,password}).pipe(
+      catchError((e: any) => Observable.throw(this.errorHandler(e))));
   }
 
   errorHandler(error: any): void {

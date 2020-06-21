@@ -11,7 +11,7 @@ import { IUserdata } from '../_interfaces/userdata';
 })
 export class UserService {
 
-  private _url: string = 'http://localhost:8000/api/user';
+  private _url: string = 'http://localhost:8000/api/users';
 
   constructor(private http: HttpClient, private authServ: AuthService) { }
 
@@ -23,7 +23,7 @@ export class UserService {
     // const requestOptions = {
     //   headers: new HttpHeaders(headers),
     // };
-    return this.http.get<IUser>(this._url);
+    return this.http.get<IUser>(this._url + '/authenticated');
   }
 
   getUserData(id): Observable<IUserdata> {
@@ -34,10 +34,10 @@ export class UserService {
     return this.http.post<IAuth>('http://localhost:8000/api/users/create', user);
   }
 
-  updateUser(user: IUser, params):any {
+  updateUser(user: IUser, data):any {
     // let httpParams = new HttpParams().set('password', 'password');
     // let options = { params: httpParams };
-    return this.http.put<any>('http://localhost:8000/api/users/' + user.id+params,{});
+    return this.http.put<any>('http://localhost:8000/api/users/',data);
   }
 
   deleteUser(user: IUser, password):any {

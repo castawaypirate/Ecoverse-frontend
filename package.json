@@ -12,7 +12,6 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^9.0.7",
-    "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.0.0",
     "@angular/compiler": "~9.0.0",
     "@angular/core": "~9.0.0",
@@ -21,11 +20,9 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "bootstrap": "^4.5.0",
-    "jquery": "^1.12.4",
-    "popper.js": "^1.16.0",
     "rxjs": "~6.5.4",
-    "rxjs-compat": "^6.5.5",
     "tslib": "^1.13.0",
     "zone.js": "~0.10.2"
   },

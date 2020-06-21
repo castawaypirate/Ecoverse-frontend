@@ -4,7 +4,6 @@ import { AuthService } from '../_services/auth.service';
 import { IUser } from '../_interfaces/user';
 import { FormBuilder } from '@angular/forms';
 import { IUserdata } from '../_interfaces/userdata';
-import { HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,8 +12,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./userprofile.component.scss']
 })
 export class UserprofileComponent implements OnInit {
-  @ViewChild("tex", {read: ElementRef}) el: ElementRef;
-
   public user : IUser;
   public userdata : IUserdata;
   public editable : boolean;
@@ -40,21 +37,15 @@ export class UserprofileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    (async () => {
-      this._userService.getUser().subscribe(user=>{this.user=user,this.userForm.setValue({username:this.user.username}),localStorage.setItem('id',''+this.user.id)});
-      await this.delay(2000);
-      this._userService.getUserData(localStorage.getItem('id')).subscribe(userdata=>{
-        this.userdata=userdata,
-        this.profileForm.setValue({
-          name:this.userdata.name,
-          surname:this.userdata.surname,
-          email:this.userdata.email,
-          location:this.userdata.location,
-          birth_date:this.userdata.birth_date})
-        });
-    })();
-
-
+      this._userService.getUser().subscribe(user=>{
+        
+        this.user=user;
+        console.log(this.user);
+        this.userForm.setValue({username:this.user.username});
+        this.profileForm.patchValue(this.user.data);
+        localStorage.setItem('id',''+this.user.id);
+        
+      });
       this.editable=true;
   }
 
@@ -76,35 +67,11 @@ export class UserprofileComponent implements OnInit {
       while (password === null || password===''){
         var password = prompt('Please enter your password:', '');
       }
-      let params = '?';
-      for (const key in this.profileForm.value) {
-        if((this.profileForm.value[key]!=null)){
-          params=params+key+'='+this.profileForm.value[key]+'&';
-        }
-      }
 
-      params=params+'password='+password+'&role=testrole&username='+this.userForm.value['username'];
-      // const parames = new HttpParams()
-      // .set('password',password)
-      // .set('username',this.userForm.value['username'])
-      // .set('role','testrole')
-      // .set('name',this.profileForm.value['name'])
-      // .set('surname',this.profileForm.value['surname'])
-      // .set('email',this.profileForm.value['email'])
-      // .set('location',this.profileForm.value['location'])
-      // .set('birth_date',this.profileForm.value['birth_date']);
-
-
-      // this.user.username=this.userForm.value;
-      // const params = new HttpParams()
-      // .set('password', password)
-      // .set('username','kappa')
-      // .set('email','kappa@mail')
-      // .set('role','role');
-      // console.log(params);
-      // console.log(parames);
-      console.log(params);
-      this._userService.updateUser(this.user,params).subscribe(user=>{user=this.user});
+      const data = this.profileForm.value;
+      data.username = this.userForm.value.username;
+      data.password = password
+      this._userService.updateUser(this.user,data).subscribe(user=>{user=this.user});
       ed.innerText='Edit';
     }
   }
