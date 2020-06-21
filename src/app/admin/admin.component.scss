@@ -5,13 +5,13 @@ header {
     background-color: var(--color-dark);
     box-shadow: 2px 2px 5px black;
   }
-  
+
   .page_wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
-  
+
   main {
     &.content {
       flex: 1 1 auto;
@@ -20,7 +20,7 @@ header {
       flex-direction: column;
      }
   }
-  
+
   footer {
     width: 100%;
     display: flex;
@@ -30,8 +30,9 @@ header {
     box-shadow: -2px -2px 2px black;
     z-index: 2;
   }
-  
+
   .component_wrapper {
     display: flex;
     width: 100%;
   }
+

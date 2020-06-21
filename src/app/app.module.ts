@@ -27,7 +27,6 @@ import { UserService } from './_services/user.service';
 import { AuthService } from './_services/auth.service';
 import { UserprofileComponent } from './admin/userprofile/userprofile.component';
 import { HeaderpanelComponent } from './admin/headerpanel/headerpanel.component';
-import { SidebarpanelComponent } from './admin/sidebarpanel/sidebarpanel.component';
 import { AuthInterceptor } from './_helpers/auth.interceptor'
 import { AuthGuard } from './_helpers/auth.guard';
 import { SignGuard } from './_helpers/sign.guard';
@@ -47,7 +46,6 @@ import { FeedComponent } from './feed/feed.component';
     NewsComponent,
     UserprofileComponent,
     HeaderpanelComponent,
-    SidebarpanelComponent,
     CreatePostComponent,
     PostComponent,
     UserPostsComponent,
