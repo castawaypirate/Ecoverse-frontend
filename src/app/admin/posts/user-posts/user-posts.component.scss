@@ -92,17 +92,7 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1024px) {
-  .crt {
-    width: 15%;
-  }
-}
-
 @media only screen and (max-width: 576px) {
-  .crt {
-    width: 30%;
-  }
-
   .cont *{
     margin-right: 3px;
     margin-top: 8px;

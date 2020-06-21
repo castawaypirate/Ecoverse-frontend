@@ -60,16 +60,3 @@
   background-color: var(--color-primary-dark);
   cursor: pointer;
 }
-
-
-@media only screen and (max-width: 1024px) {
-  .crt {
-    width: 15%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .crt {
-    width: 30%;
-  }
-}
