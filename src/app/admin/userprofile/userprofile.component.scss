@@ -1,10 +1,14 @@
 $danger: var(--color-danger);
 
+:host {
+  width: 100%;
+}
+
 .usercontainer {
   display: flex;
   padding: 0.8rem;
   width: 85%;
-  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .column {
@@ -57,7 +61,6 @@ $danger: var(--color-danger);
   padding: 15px;
 }
 
-
 .data {
   width: 140%;
   border-width:0;
@@ -81,13 +84,19 @@ $danger: var(--color-danger);
   outline-width: 0px;
 }
 
+.card-body-btn {
+  display: flex;
+  flex-direction: column;
+
+}
+
 .btn-secondary {
-  margin-right: 15px;
+  margin: 10px;
   outline-width: 0px;
 }
 
 .btn-primary {
-  margin-left: 15px;
+  margin: 10px;
   background-color: $danger;
   filter: brightness(150%);
   outline-width: 0px;
@@ -95,4 +104,41 @@ $danger: var(--color-danger);
 
 .btn-primary:hover {
   filter: brightness(130%);
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+  .column {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  .usercontainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card {
+    margin: 5px !important;
+    padding: 5px !important;
+  }
+
+  .data {
+    width: 130%;
+  }
+
+  .lab {
+    width: 69%;
+  }
 }

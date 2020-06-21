@@ -1,14 +1,16 @@
-<div class="usercontainer">
-  <div class="column">
-    <div class="card" style="width: 25rem;">
+<div class="usercontainer" style="width: 100%;">
+  <div class="column" style="width: 30%; margin-left: 10%;">
+    <div class="card" >
       <img class="card-img-top" src="..\assets\images\profile.jpg" alt="Card image cap">
       <div class="card-body">
         <form [formGroup]="userForm">
-          <input class="data" style="width: 100% !important;" type="text" placeholder="username" [readOnly]="editable" formControlName="username">
+          <input class="data" style="width: 100% !important; font-size: larger;" type="text" placeholder="username" [readOnly]="editable" formControlName="username">
         </form>
       </div>
     </div>
-    <div class="card" style="width: 25rem;">
+  </div>
+  <div class="column" style="width: 50%;">
+    <div class="card">
       <div class="card-body">
         <form [formGroup]="profileForm">
           <div class="field">
@@ -29,24 +31,20 @@
           </div>
           <div class="field">
             <label class="lab" for="birthday">Birthday : </label>
-            <input class="data" type="text" placeholder="birthday" [readOnly]="editable" formControlName="birth_date"><br>
+            <input class="data" style="width: 85%;" type="date" placeholder="birthday" [readOnly]="editable" formControlName="birth_date"><br>
           </div>
         </form>
       </div>
     </div>
-    <div class="card" style="width: 25rem;">
-      <div class="card-body">
+  </div>
+  <div class="column" style="width: 20%; margin-right: 10%;">
+    <div class="card">
+      <div class="card-body-btn">
         <button #ed (click)="edit(ed)" class="btn btn-secondary">Edit</button>
         <button (click)="delete()" class="btn btn-primary">Delete</button>
       </div>
     </div>
   </div>
-  <div class="column">
-    <div class="cardinfo">
-      <div class="cardinfo-body">
-        <p>News</p>
-      </div>
-    </div>
-  </div>
+
 </div>
 

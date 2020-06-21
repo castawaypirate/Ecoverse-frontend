@@ -1,3 +1,11 @@
+:host{
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+}
+
 .container {
   width: 100%;
 }
@@ -9,6 +17,7 @@
 }
 
 .btn {
+  cursor: default;
   width: 100%;
   padding: 1rem;
   margin: 5px;
@@ -17,16 +26,17 @@
   background-color: var(--color-secondary);
 }
 
-.btn:hover {
-  background-color: var(--color-secondary-dark);
-}
-
-.fa-pencil {
+.fa-pen {
   margin-left: 10px;
 }
 
-.fa-trash {
-  font-size: 25px;
+.remove:hover {
+  cursor: pointer;
+  color: var(--color-danger) !important;
+}
+
+.fa {
+  font-size: 20px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -34,4 +44,22 @@
 .fa-trash:hover {
   cursor: pointer;
   color: var(--color-danger);
+}
+
+.crt {
+  width: 200px;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  outline-width: 0px;
+  border-width:0;
+  background-color: var(--color-primary);
+  margin-left: 5px;
+}
+
+.crt:hover {
+  background-color: var(--color-primary-dark);
+  cursor: pointer;
 }

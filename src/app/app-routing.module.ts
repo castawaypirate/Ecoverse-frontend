@@ -95,12 +95,12 @@ const routes: Routes = [
             component: UserPostsComponent,
           },
           {
-            path: ':id',
-            component: EditPostComponent,
-          },
-          {
             path: 'create',
             component: CreatePostComponent,
+          },
+          {
+            path: ':id',
+            component: EditPostComponent,
           }
         ]
       },
