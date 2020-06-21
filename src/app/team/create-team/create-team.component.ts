@@ -28,7 +28,7 @@ export class CreateTeamComponent implements OnInit {
         .subscribe(
           res => {
             console.log(res);
-            this.router.navigate(['team/teams']);
+            this.router.navigate(['/admin/teams']);
           },
           err => {
             console.log(err);
