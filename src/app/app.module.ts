@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
@@ -12,6 +12,10 @@ import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { PostComponent } from './post/post.component';
+import { UserPostsComponent } from './user-posts/user-posts.component';
+import { JwPaginationModule } from 'jw-angular-pagination';
 
 import { UserService } from './_services/user.service';
 import { AuthService } from './_services/auth.service';
@@ -34,7 +38,10 @@ import { SignGuard } from './_helpers/sign.guard';
     NewsComponent,
     UserprofileComponent,
     HeaderpanelComponent,
-    SidebarpanelComponent
+    SidebarpanelComponent,
+    CreatePostComponent,
+    PostComponent,
+    UserPostsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,9 @@ import { SignGuard } from './_helpers/sign.guard';
     AuthService,
     AuthGuard,
     SignGuard,
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    HttpClientModule,
+    JwPaginationModule
   ],
   bootstrap: [AppComponent]
 })
