@@ -5,66 +5,81 @@ import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
 import { AboutComponent } from "./about/about.component";
 import { NewsComponent } from './news/news.component';
-import { UserprofileComponent } from './userprofile/userprofile.component';
-import { HeaderpanelComponent } from './headerpanel/headerpanel.component';
+import { UserprofileComponent } from './admin/userprofile/userprofile.component';
+import { HeaderpanelComponent } from './admin/headerpanel/headerpanel.component';
 import { AuthGuard } from './_helpers/auth.guard';
 import { SignGuard } from './_helpers/sign.guard';
-import { CreatePostComponent} from "./create-post/create-post.component";
-import { PostComponent} from "./post/post.component";
-import {UserPostsComponent} from "./user-posts/user-posts.component";
+import { CreatePostComponent } from "./admin/posts/create-post/create-post.component";
+import { PostComponent } from "./admin/posts/post/post.component";
+import { UserPostsComponent } from "./admin/posts/user-posts/user-posts.component";
+import { AdminComponent } from './admin/admin.component';
+import { PublicComponent } from './public/public.component';
 
 
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomepageComponent,
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
-  },
-  {
-    path: 'sign',
-    component: SignComponent,canActivate:[SignGuard],
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
-  },
-  {
-    path: 'news',
-    component: NewsComponent,
-  },
-  {
-    path: 'userprofile',
-    component: UserprofileComponent,canActivate:[AuthGuard],
-  },
-  {
-    path: 'headerpanel',
-    component: HeaderpanelComponent,canActivate:[AuthGuard],
-  },
-  {
-    path: 'create_post',
-    component: CreatePostComponent,
-  },
-  {
-    path: 'post',
-    component: PostComponent,
-  },
-  {
-    path:'user_posts',
-    component: UserPostsComponent,
-  },
-
-  {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+    component: PublicComponent,
+    children:
+      [
+        {
+          path: '',
+          component: HomepageComponent,
+        },
+        {
+          path: 'contact',
+          component: ContactComponent,
+        },
+        {
+          path: 'sign',
+          component: SignComponent, canActivate: [SignGuard],
+        },
+        {
+          path: 'about',
+          component: AboutComponent,
+        },
+        {
+          path: 'news',
+          component: NewsComponent,
+        }
+      ]
+  },
+  {
+    path: 'admin',
+    canActivate: [AuthGuard],
+    component: AdminComponent,
+    children: [
+      {
+        path: '',
+        component: UserprofileComponent,
+      },
+      {
+        path: 'headerpanel',
+        component: HeaderpanelComponent,
+      },
+      {
+        path: 'posts',
+        children: [
+          {
+            path: '',
+            component: UserPostsComponent,
+          },
+          {
+            path: ':id',
+            component: PostComponent,
+          },
+          {
+            path: 'create_post',
+            component: CreatePostComponent,
+          }
+        ]
+      },
+    ]
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/',
     pathMatch: 'full'
   }
 ];

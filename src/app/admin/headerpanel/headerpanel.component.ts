@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, ElementRef, Renderer2, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '../_services/user.service';
-import { IUser } from '../_interfaces/user';
+import { UserService } from '../../_services/user.service';
+import { IUser } from '../../_interfaces/user';
 
 @Component({
   selector: 'app-headerpanel',

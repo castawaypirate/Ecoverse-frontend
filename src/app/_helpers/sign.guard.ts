@@ -13,7 +13,7 @@ export class SignGuard implements CanActivate {
       if (localStorage.getItem('userToken')==null){
         return true;
       }
-      this.router.navigate(['/userprofile']);
+      this.router.navigate(['/admin']);
       return false;
   }
 

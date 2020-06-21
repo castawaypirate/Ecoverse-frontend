@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { UserService } from '../_services/user.service';
-import { AuthService } from '../_services/auth.service';
-import { IUser } from '../_interfaces/user';
+import { UserService } from '../../_services/user.service';
+import { AuthService } from '../../_services/auth.service';
+import { IUser } from '../../_interfaces/user';
 import { FormBuilder } from '@angular/forms';
-import { IUserdata } from '../_interfaces/userdata';
+import { IUserdata } from '../../_interfaces/userdata';
 import { Router } from '@angular/router';
 
 @Component({

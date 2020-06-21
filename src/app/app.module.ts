@@ -12,19 +12,21 @@ import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
-import { CreatePostComponent } from './create-post/create-post.component';
-import { PostComponent } from './post/post.component';
-import { UserPostsComponent } from './user-posts/user-posts.component';
+import { CreatePostComponent } from './admin/posts/create-post/create-post.component';
+import { PostComponent } from './admin/posts/post/post.component';
+import { UserPostsComponent } from './admin/posts/user-posts/user-posts.component';
 import { JwPaginationModule } from 'jw-angular-pagination';
 
 import { UserService } from './_services/user.service';
 import { AuthService } from './_services/auth.service';
-import { UserprofileComponent } from './userprofile/userprofile.component';
-import { HeaderpanelComponent } from './headerpanel/headerpanel.component';
-import { SidebarpanelComponent } from './sidebarpanel/sidebarpanel.component';
+import { UserprofileComponent } from './admin/userprofile/userprofile.component';
+import { HeaderpanelComponent } from './admin/headerpanel/headerpanel.component';
+import { SidebarpanelComponent } from './admin/sidebarpanel/sidebarpanel.component';
 import { AuthInterceptor } from './_helpers/auth.interceptor'
 import { AuthGuard } from './_helpers/auth.guard';
 import { SignGuard } from './_helpers/sign.guard';
+import { AdminComponent } from './admin/admin.component';
+import { PublicComponent } from './public/public.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { SignGuard } from './_helpers/sign.guard';
     SidebarpanelComponent,
     CreatePostComponent,
     PostComponent,
-    UserPostsComponent
+    UserPostsComponent,
+    AdminComponent,
+    PublicComponent
   ],
   imports: [
     BrowserModule,

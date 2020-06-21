@@ -9,7 +9,7 @@
     <span >{{post.author_id}}</span>
     <span>{{post.title}}</span>
     <span>{{post.id}}</span>
-    <a href="/posts/{{post.id}}">GO</a>
+    <a routerLink="/admin/posts/{{post.id}}">GO</a>
   </div>
   <jw-pagination [items]="posts" (changePage)="onChangePage($event)"></jw-pagination>
 
