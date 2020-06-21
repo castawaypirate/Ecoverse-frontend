@@ -36,6 +36,23 @@ export class EditTeamComponent implements OnInit {
       );
   }
 
+  triggerUpload(fileInput) {
+    fileInput.click();
+  }
+
+  fileUpload(fileInput) {
+    let reader = new FileReader();
+
+    if (fileInput.files && fileInput.files.length) {
+      const [file] = fileInput.files;
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        this.teamForm.controls.image.setValue(file);
+      }
+    }
+  }
+
   onSubmit(): void {
     if (this.teamForm.valid) {
       this.teamSrv.editTeam(this.teamId, this.teamForm.value).subscribe(

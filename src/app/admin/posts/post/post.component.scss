@@ -22,7 +22,7 @@
 }
 .border_image img{
   object-fit: cover;
-  max-height: 450px;
+  height: 450px;
   width: 100%;
 }
 
@@ -60,3 +60,8 @@
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .border_image img{
+    height: auto;
+  }
+}

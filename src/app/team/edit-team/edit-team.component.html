@@ -8,7 +8,9 @@
       </div>
 
       <div class="content">
-        <button><img src="../../assets/images/pic.png"> Add Recognizable Image</button>
+        <button (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit"><i
+          class="fas fa-upload"></i>Add featured image</button>
+        <input #fileInput (change)="fileUpload(fileInput)" type="file">
         <b style="font-size: 20px">Team Description</b>
         <textarea formControlName="description"></textarea>
       </div>

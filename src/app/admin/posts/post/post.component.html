@@ -1,6 +1,6 @@
 <div class="main_box">
   <div class="border_image">
-    <img src="../../assets/images/env.jpeg">
+    <img src="{{ post.image ? post.image : '../../assets/images/env.jpeg' }}">
   </div>
   <div class="title">
     <b>{{ post?.title }}</b>

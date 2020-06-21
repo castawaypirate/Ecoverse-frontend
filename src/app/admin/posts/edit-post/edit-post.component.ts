@@ -20,6 +20,7 @@ export class EditPostComponent implements OnInit {
   postForm = this.fb.group({
     title:['', Validators.required],
     content:['', Validators.required],
+    image: null,
     public: 0
   })
 
@@ -32,7 +33,22 @@ export class EditPostComponent implements OnInit {
     });
   }
 
+  triggerUpload(fileInput) {
+    fileInput.click();
+  }
 
+  fileUpload(fileInput) {
+    let reader = new FileReader();
+
+    if (fileInput.files && fileInput.files.length) {
+      const [file] = fileInput.files;
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        this.postForm.controls.image.setValue(file);
+      }
+    }
+  }
 
   onSubmit() {
     this.post = this.postForm.value;
