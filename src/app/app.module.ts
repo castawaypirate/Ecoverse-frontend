@@ -32,6 +32,7 @@ import { AuthGuard } from './_helpers/auth.guard';
 import { SignGuard } from './_helpers/sign.guard';
 import { AdminComponent } from './admin/admin.component';
 import { PublicComponent } from './public/public.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { PublicComponent } from './public/public.component';
     EditTeamsComponent,
     SingleTeamComponent,
     AdminComponent,
-    PublicComponent
+    PublicComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,

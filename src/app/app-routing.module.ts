@@ -1,4 +1,4 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
@@ -19,6 +19,8 @@ import { EditTeamComponent } from './team/edit-team/edit-team.component';
 import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
 import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
 import { SingleTeamComponent } from './team/single-team/single-team.component';
+import { FeedComponent } from './feed/feed.component';
+
 
 
 const routes: Routes = [
@@ -60,6 +62,10 @@ const routes: Routes = [
             },
           ]
         },
+        {
+          path: 'feed',
+          component: FeedComponent
+        }
       ]
   },
 
