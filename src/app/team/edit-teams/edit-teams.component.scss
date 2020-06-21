@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+ul {
+  margin: 0;
+}
+
 .container {
   width: 100%;
 }
@@ -52,7 +56,6 @@
   outline-width: 0px;
   border-width:0;
   background-color: var(--color-primary);
-  margin-top: 15px;
   margin-left: 5px;
 }
 
