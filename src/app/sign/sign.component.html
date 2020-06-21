@@ -6,7 +6,7 @@
             <li class="tablink" (click)="showLogin()" [class.active]="!show"><a>Sign in</a></li>
         </ul>
         <div id="sign-up-tab" class="tabcontent" *ngIf="show">
-            <hr> 
+            <hr>
             <form [formGroup]="userprofileForm" (ngSubmit)="onSubmit()">
                 <div class="con1">
                     <div class="field">
@@ -24,9 +24,9 @@
                         <input [attr.type]="isPassword?'password':'text'" required autocomplete="off" id="psw" formControlName="password">
                         <label for="psw" title="Password" data-title="Password"></label>
                     </div>
-                    
+
                     <div class="field" id="field4">
-                        <input [attr.type]="isPassword?'password':'text'" required autocomplete="off" id="conf" formControlName="confirm">
+                        <input [attr.type]="isPassword?'password':'text'" required autocomplete="off" id="conf" formControlName="password_confirmation">
                         <label for="conf" title="Confirm" data-title="Confirm"></label>
                     </div>
                     <div #eye class="eye slash" (click)="togglePW(eye)">
@@ -34,35 +34,35 @@
                         <div></div>
                       </div>
                 </div>
-            
+
                 <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-        
+
                 <div class="clearfix">
                     <button type="submit" class="signbtn" [disabled]="!userprofileForm.valid">Create an account</button>
                 </div>
             </form>
         </div>
         <div id="sign-in-tab" class="tabcontent" *ngIf="!show">
-            <hr> 
+            <hr>
             <form [formGroup]="memberprofileForm" (ngSubmit)="onLogin()">
                 <div class="con3">
                     <div class="field">
                         <input type="text" required autocomplete="off" id="usrin" formControlName="username">
-                        <label for="usrin" title="Username/Email" data-title="Username"></label>
+                        <label for="usrin" title="Username" data-title="Username"></label>
                     </div>
                     <div class="field">
                         <input type="password" required autocomplete="off" id="pswin" formControlName="password">
                         <label for="pswin" title="Password" data-title="Password"></label>
                     </div>
                 </div>
-                
+
                 <div class="con4">
                     <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                        <input type="checkbox"  name="remember"> Remember me
                     </label>
                     <div><a href="#" style="color:dodgerblue">Forgot password?</a></div>
                 </div>
-                
+
                 <div class="clearfix">
                     <button type="submit" class="signbtn" [disabled]="!memberprofileForm.valid">Sign in</button>
                 </div>

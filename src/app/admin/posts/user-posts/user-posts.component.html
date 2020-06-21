@@ -1,0 +1,18 @@
+<div class="main_box">
+  <h3>Your posts:</h3>
+  <div class="post">
+    <b>Title</b>
+    <b>Author</b>
+    <b>Likes</b>
+  </div>
+  <div class="post" *ngFor="let post of pageOfPosts">
+    <span >{{post.title}}</span>
+    <span>{{post.author_id}}</span>
+    <span>{{post.id}}</span>
+    <a routerLink="/post/{{post.id}}">Read</a>
+    <a routerLink="/admin/posts/{{post.id}}">Edit</a>
+    <a (click)="deletePost(post.id)">Delete</a>
+  </div>
+  <jw-pagination [items]="posts" (changePage)="onChangePage($event)"></jw-pagination>
+
+</div>

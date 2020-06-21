@@ -1,101 +1,61 @@
-
-
-  
 <div class="container">
-      
-    
-    <div class="news">
-        <div class="box">
-            
-            <img class="card-img" src="assets/images/corona.jpg">
-            <div class="boxquote">
-                <a href="https://www.bbc.com/future/article/20200326-covid-19-the-impact-of-coronavirus-on-the-environment">
-                    <h3>Will Covid-19 have a lasting impact on the environment?</h3>
-                    <span class="date">publication date: 27 apr 2020</span>
-                    <p>
-                        In a matter of months, the world has been transformed. Thousands of people have already died, and hundreds of thousands more have fallen ill, from a coronavirus that was previously unknown before appearing in the city of Wuhan in December 2019. For millions of others who have not caught the disease, their entire way of life has changed by it.s. 
-                    </p>
-                    <p>  
-                        The streets of Wuhan, China, are deserted after authorities implemented a strict lockdown. In Italy, the most   <a href="https://www.bbc.com/future/article/20200326-covid-19-the-impact-of-coronavirus-on-the-environment" data-link-name="in body link" class="u-underline">Read More...</a>
-                    </p>
-            </a>
-            </div>
-        </div>
-        <div class="box">
-            <img class="card-img" src="assets/images/plastic.jpg">
-            <div class="boxquote">
-                <a href="https://www.nationalgeographic.com/magazine/2018/06/plastic-planet-waste-pollution-trash-crisis/"> 
-                    <h3>We made plastic.We depend on it.Now we're drowning in it.</h3>
-                    <span class="date">publication date: 26 apr 2020</span>
-                         <p>
-                            The miracle material has made modern life possible. But more than 40 percent of it is used just once, and it’s choking our waterways.
-                        </p>
-                        <p>
-                          No one knows how much unrecycled plastic waste ends up in the ocean, Earth’s last sink. In 2015, Jenna Jambeck, a University of Georgia engineering professor, caught everyone’s attention with a rough estimate: between 5.3 million and 14 million tons each year just from coastal regions.Most of it isn’t thrown off ships <a href="https://www.nationalgeographic.com/magazine/2018/06/plastic-planet-waste-pollution-trash-crisis/" data-link-name="in body link" class="u-underline">Read More...</a>
-                        </p>
-                </a>
-            </div>
-       </div>
-        <div class="box">
-            <img class="card-img" src="assets/images/eday.jpg">
-            <div class="boxquote">
-                <a href="https://www.earthday.org/earth-day-2020/">
-                    <h3>Earth Day goes digital to engage online gamers with environment issues</h3>
-                    <span class="date">publication date: 23 apr 2020</span>
-                        <p>
-                            Earth Day demonstrations scrapped due to the coronavirus pandemic are being replaced with digital activism via the online gaming community to exploit an as yet untapped audience for action against climate change.
-                        </p>
-                        <p> <a href="https://www.earthday.org/earth-day-2020/" data-link-name="in body link" class="u-underline"> Earth Day, 22 April 2020</a>, had been years in the planning but the large global demonstrations to mark the event’s 50th anniversary were brought to a halt by Covid-19. In a swift pivot from the physical action which was to have been spearheaded by half a million <a href="https://www.theguardian.com/environment/2020/apr/22/earth-day-bypasses-virus-with-journey-into-gaming-world" data-link-name="in body link" class="u-underline">Read More...</a>
-                        </p>
-                </a>
-            </div>
-        </div>
+  <div class="news">
+    <div class="box" *ngFor="let post of posts">
+      <img class="card-img" src="{{ post.image ? post.image : 'assets/images/dull.jpg' }}">
+      <div class="boxquote">
+        <a routerLink="/post/{{ post.id }}">
+          <h3>{{ post.title }}</h3>
+          <span class="date">publication date: {{ post.created_at }}</span>
+          <p>{{ post.summary }}</p>
+        </a>
+      </div>
     </div>
-     
-        <div class="articles">
-            
-            <div class="atitle"> 
-                <h2>Recent Articles</h2> 
-            </div> 
-            <div class="chapter">
-                <a href="#">
-                <img class="art-img" src="assets/images/confii.jpg">
-                <h4>Pandemic side-effects</h4>
-                <span class="date">26/4/2020</span>
-                </a>
-            </div> 
-            <div class="chapter">
-                <a href="#">
-                <img class="art-img" src="assets/images/pollute.jpg">
-                <h4>Decreased emissions due to covid-19</h4>
-                <span class="date">16/4/2020</span>
-                </a>
-            </div>
-            <div class="chapter">
-                <a href="#">
-                <img class="art-img" src="assets/images/insect.jpg">
-                <h4>Insect numbers down 25% since 1990</h4>
-                <span class="date">29/3/2020</span>
-                </a>
-            </div>
-            <div class="chapter">
-                <a href="#">
-                <img class="art-img" src="assets/images/forest.jpg">
-                <h4>Amazon Rainforest Burned Down </h4>
-                <span class="date">19/2/2020</span>
-                </a>
-            </div>
-        </div>
+  </div>
+
+  <div class="articles">
+
+    <div class="atitle">
+      <h2>Recent Articles</h2>
+    </div>
+    <div class="chapter">
+      <a href="#">
+        <img class="art-img" src="assets/images/confii.jpg">
+        <h4>Pandemic side-effects</h4>
+        <span class="date">26/4/2020</span>
+      </a>
+    </div>
+    <div class="chapter">
+      <a href="#">
+        <img class="art-img" src="assets/images/pollute.jpg">
+        <h4>Decreased emissions due to covid-19</h4>
+        <span class="date">16/4/2020</span>
+      </a>
+    </div>
+    <div class="chapter">
+      <a href="#">
+        <img class="art-img" src="assets/images/insect.jpg">
+        <h4>Insect numbers down 25% since 1990</h4>
+        <span class="date">29/3/2020</span>
+      </a>
+    </div>
+    <div class="chapter">
+      <a href="#">
+        <img class="art-img" src="assets/images/forest.jpg">
+        <h4>Amazon Rainforest Burned Down </h4>
+        <span class="date">19/2/2020</span>
+      </a>
+    </div>
+  </div>
 </div>
-    <div class="center">
-        <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a href="#" class="active">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a>
-        </div> 
-    </div>
+<div class="center">
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+  </div>
+</div>
