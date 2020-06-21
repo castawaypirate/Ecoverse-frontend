@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import {IPost} from "../create-post/ipost";
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserPostsService {
+export class PostService {
 
   headers = new HttpHeaders({
     Authorization:
@@ -17,15 +15,10 @@ export class UserPostsService {
   });
   options = {headers: this.headers};
 
-
   private url: string = "http://localhost:8000/api/posts";
 
   constructor(private http: HttpClient) { }
-
-  getPosts(){
-    return this.http.get(this.url + '/author/1' , this.options);
-  }
-  deletePost(id){
-    return this.http.delete(this.url + '/' + id , this.options);
+  getPost(id){
+    return this.http.get(this.url + '/' + id , this.options)
   }
 }

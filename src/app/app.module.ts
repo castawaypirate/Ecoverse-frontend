@@ -16,6 +16,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { PostComponent } from './post/post.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { JwPaginationModule } from 'jw-angular-pagination';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { JwPaginationModule } from 'jw-angular-pagination';
     NewsComponent,
     CreatePostComponent,
     PostComponent,
-    UserPostsComponent
+    UserPostsComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

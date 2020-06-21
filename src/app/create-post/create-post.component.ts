@@ -30,9 +30,8 @@ export class CreatePostComponent implements OnInit {
 
   onSubmit() {
     this.post = this.postForm.value;
-    this.post.author_id = 1;
     console.log(this.post);
-    this.postService.addPost(this.post).subscribe(post=>{alert("Succesfully Added Post")});
+    this.postService.addPost(this.post).subscribe(post=>{alert("Successfully Added Post")});
   }
 
 }

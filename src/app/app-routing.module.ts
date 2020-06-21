@@ -8,6 +8,7 @@ import { NewsComponent } from './news/news.component';
 import { CreatePostComponent} from "./create-post/create-post.component";
 import { PostComponent} from "./post/post.component";
 import {UserPostsComponent} from "./user-posts/user-posts.component";
+import {EditPostComponent} from "./edit-post/edit-post.component";
 
 
 
@@ -37,9 +38,15 @@ const routes: Routes = [
     component: CreatePostComponent,
   },
   {
-    path: 'post',
+    path: 'post/:id',
     component: PostComponent,
   },
+
+  {
+    path:'edit_post/:id',
+    component: EditPostComponent
+  },
+
   {
     path:'user_posts',
     component: UserPostsComponent,

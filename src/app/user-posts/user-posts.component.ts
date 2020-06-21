@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserPostsService} from "./user-posts.service";
 import {IPost} from "../create-post/ipost";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-user-posts',
@@ -13,13 +14,21 @@ export class UserPostsComponent implements OnInit {
   public posts = [];
   public pageOfPosts: Array<any>;
 
-  constructor(private srvc: UserPostsService) { }
+  constructor(private srvc: UserPostsService, private title: Title , private meta: Meta) { }
 
   ngOnInit(): void {
-    this.srvc.getPosts(1).subscribe((data: IPost[]) => {
+    this.title.setTitle('Your Posts');
+    this.meta.updateTag({ name: 'description', content: 'Users list of posts' });
+    this.srvc.getPosts().subscribe((data: IPost[]) => {
       console.log(data)
       this.posts =data;
     });
+  }
+
+  deletePost(id){
+    this.srvc.deletePost(id).subscribe(data => {
+      console.log("success");
+    })
   }
 
   onChangePage(pageOfPosts: Array<any>) {
