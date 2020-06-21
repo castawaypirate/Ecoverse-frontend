@@ -15,7 +15,7 @@ export class UserprofileComponent implements OnInit {
   public user : IUser;
   public userdata : IUserdata;
   public editable : boolean;
-
+  profilePic;
 
   constructor( private router : Router, private fb : FormBuilder , private _userService: UserService , private _authService : AuthService) { }
 
@@ -38,15 +38,36 @@ export class UserprofileComponent implements OnInit {
 
   ngOnInit(): void {
       this._userService.getUser().subscribe(user=>{
-        
         this.user=user;
         console.log(this.user);
         this.userForm.setValue({username:this.user.username});
         this.profileForm.patchValue(this.user.data);
         localStorage.setItem('id',''+this.user.id);
-        
+        this.profilePic = this.user.data.image;
       });
       this.editable=true;
+  }
+
+  triggerUpload(fileInput) {
+    fileInput.click();
+  }
+
+  fileUpload(fileInput) {
+    let reader = new FileReader();
+
+    if (fileInput.files && fileInput.files.length) {
+      const [file] = fileInput.files;
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        this._userService.uploadImg(file).subscribe(
+          res => {
+            console.log(res);
+            this.profilePic = res.image;
+          }
+        );
+      }
+    }
   }
 
   edit(ed){
@@ -71,7 +92,7 @@ export class UserprofileComponent implements OnInit {
       const data = this.profileForm.value;
       data.username = this.userForm.value.username;
       data.password = password
-      this._userService.updateUser(this.user,data).subscribe(user=>{user=this.user});
+      this._userService.updateUser(data).subscribe(user=>{user=this.user});
       ed.innerText='Edit';
     }
   }

@@ -26,11 +26,19 @@ export class TeamService {
     return this.http.get<Team[]>(this.url + '/');
   }
 
-  createTeam(data) {
+  createTeam(team) {
+    const data = new FormData();
+    for ( const key in team ) {
+      data.append(key, team[key]);
+    }
     return this.http.post<Team>(this.url + '/create', data);
   }
 
-  editTeam(teamId, data) {
+  editTeam(teamId, team) {
+    const data = new FormData();
+    for ( const key in team ) {
+      data.append(key, team[key]);
+    }
     return this.http.post<Team>(this.url + '/' + teamId + '/edit', data);
   }
 

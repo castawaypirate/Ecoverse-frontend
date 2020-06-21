@@ -35,10 +35,14 @@ export class UserService {
     return this.http.post<IAuth>(this._url + '/create', user);
   }
 
-  updateUser(user: IUser, data):any {
-    // let httpParams = new HttpParams().set('password', 'password');
-    // let options = { params: httpParams };
-    return this.http.put<any>(this._url + '/',data);
+  updateUser(user):any {
+    return this.http.put<any>(this._url + '/', user);
+  }
+
+  uploadImg(img) {
+    const data = new FormData();
+    data.append('image', img);
+    return this.http.post<any>(this._url + '/', data);
   }
 
   deleteUser(user: IUser, password):any {

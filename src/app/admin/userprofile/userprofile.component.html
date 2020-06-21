@@ -1,10 +1,17 @@
 <div class="usercontainer" style="width: 100%;">
   <div class="column" style="width: 30%; margin-left: 10%;">
-    <div class="card" >
-      <img class="card-img-top" src="..\assets\images\profile.jpg" alt="Card image cap">
+    <div class="card">
+      <form [formGroup]="userForm" class="image-form">
+        <img class="card-img-top" src="{{ profilePic ? profilePic : '../assets/images/profile.jpg'}}" alt="Card image cap">
+        <button (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit"><i
+            class="fas fa-upload"></i>Upload Image</button>
+        <input #fileInput (change)="fileUpload(fileInput)" type="file">
+      </form>
       <div class="card-body">
         <form [formGroup]="userForm">
-          <input class="data" style="width: 100% !important; font-size: larger;" type="text" placeholder="username" [readOnly]="editable" formControlName="username">
+
+          <input class="data" style="width: 100% !important; font-size: larger;" type="text" placeholder="username"
+            [readOnly]="editable" formControlName="username">
         </form>
       </div>
     </div>
@@ -31,7 +38,8 @@
           </div>
           <div class="field">
             <label class="lab" for="birthday">Birthday : </label>
-            <input class="data" style="width: 85%;" type="date" placeholder="birthday" [readOnly]="editable" formControlName="birth_date"><br>
+            <input class="data" style="width: 85%;" type="date" placeholder="birthday" [readOnly]="editable"
+              formControlName="birth_date"><br>
           </div>
         </form>
       </div>
@@ -47,4 +55,3 @@
   </div>
 
 </div>
-

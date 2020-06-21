@@ -17,8 +17,11 @@ export class CreatePostService {
   constructor(private http: HttpClient) { }
 
   addPost(post: IPost): Observable<IPost>{
-    return this.http.post<IPost>(this.url,post);
-
+    const data = new FormData();
+    for ( const key in post ) {
+      data.append(key, post[key]);
+    }
+    return this.http.post<IPost>(this.url,data);
   }
 
 }
