@@ -15,7 +15,7 @@
       <div class="members">
           <label>Members</label>
           <ul formArrayName="members">
-            <li *ngFor="let member of members; index as i">{{ member.data.name }} 
+            <li *ngFor="let member of members; index as i">{{ member.data.name }}
               <button (click)="removeMember(i, member.id)"><span class="fas fa-times"></span>Remove member</button></li>
           </ul>
       </div>

@@ -1,5 +1,9 @@
-<ul>
-    <li *ngFor="let team of teams">
-        <button class="btn" routerLink="/admin_team/edit/{{team.id}}">{{ team.name }}</button>
+<div class="cont">
+  <ul>
+    <li class="tm" *ngFor="let team of teams">
+        <button class="btn" routerLink="/admin_team/edit/{{team.id}}">{{ team.name }}<i class="fa fa-pencil"></i></button><i class="fa fa-trash"></i>
     </li>
 </ul>
+</div>
+
+
