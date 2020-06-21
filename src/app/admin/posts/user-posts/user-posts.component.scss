@@ -15,21 +15,97 @@
   margin-bottom: 10px ;
 }
 
-.post{
-  background-color: white;
-  border-radius: 3px;
+// .post{
+//   background-color: white;
+//   border-radius: 3px;
+//   width: 100%;
+//   padding: 1rem;
+//   border-style: solid;
+//   border-color: black;
+// }
+// .post *{
+//   margin-right: 10px;
+// }
+
+.container {
   width: 100%;
-  padding: 1rem;
-  border-style: solid;
-  border-color: black;
 }
-.post *{
-  margin-right: 10px;
 
-
+.post {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
+
 .post a{
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 5px;
+  color: black;
 }
 
+.post a:hover {
+  color: var(--color-primary-dark);
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  font-size: large;
+  font-weight: bold;
+  background-color: var(--color-secondary);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cont *{
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+
+.fa-trash {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.fa-trash:hover {
+  cursor: pointer;
+  color: var(--color-danger);
+}
+
+.crt {
+  width: 10%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: bold;
+  outline-width: 0px;
+  border-width:0;
+  background-color: var(--color-primary);
+}
+
+.crt:hover {
+  background-color: var(--color-primary-dark);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .crt {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .crt {
+    width: 30%;
+  }
+
+  .cont *{
+    margin-right: 3px;
+    margin-top: 8px;
+  }
+}

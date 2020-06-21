@@ -1,3 +1,7 @@
+:host{
+  width: 100%;
+}
+
 .container {
   width: 100%;
 }
@@ -21,7 +25,7 @@
   background-color: var(--color-secondary-dark);
 }
 
-.fa-pencil {
+.fa-pen {
   margin-left: 10px;
 }
 
@@ -34,4 +38,35 @@
 .fa-trash:hover {
   cursor: pointer;
   color: var(--color-danger);
+}
+
+.crt {
+  width: 10%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: bold;
+  outline-width: 0px;
+  border-width:0;
+  background-color: var(--color-primary);
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.crt:hover {
+  background-color: var(--color-primary-dark);
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .crt {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .crt {
+    width: 30%;
+  }
 }

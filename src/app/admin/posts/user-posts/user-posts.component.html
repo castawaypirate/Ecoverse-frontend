@@ -1,16 +1,14 @@
 <div class="main_box">
-  <h3>Your posts:</h3>
-  <div class="post">
-    <b>Title</b>
-    <b>Author</b>
-    <b>Likes</b>
-  </div>
   <div class="post" *ngFor="let post of pageOfPosts">
-    <span >{{post.author_id}}</span>
-    <span>{{post.title}}</span>
-    <span>{{post.id}}</span>
-    <a routerLink="/admin/posts/{{post.id}}">GO</a>
+    <div class="cont">
+      <span>{{post.author_id}}</span>
+      <span>{{post.title}}</span>
+      <span>{{post.id}}</span>
+      <a routerLink="/admin/posts/{{post.id}}"><i class="fa fa-pen"></i></a>
+    </div>
+    <i class="fa fa-trash"></i>
   </div>
+  <button (click)='nav()' class="crt">Create Post</button>
   <jw-pagination [items]="posts" (changePage)="onChangePage($event)"></jw-pagination>
 
 </div>

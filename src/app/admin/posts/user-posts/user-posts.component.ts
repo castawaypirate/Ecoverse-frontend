@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserPostsService} from "./user-posts.service";
 import {IPost} from "../create-post/ipost";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-posts',
@@ -13,7 +14,7 @@ export class UserPostsComponent implements OnInit {
   public posts = [];
   public pageOfPosts: Array<any>;
 
-  constructor(private srvc: UserPostsService) { }
+  constructor(private router : Router , private srvc: UserPostsService) { }
 
   ngOnInit(): void {
     this.srvc.getPosts().subscribe( data => {
@@ -25,6 +26,10 @@ export class UserPostsComponent implements OnInit {
   onChangePage(pageOfPosts: Array<any>) {
     // update current page of items
     this.pageOfPosts = pageOfPosts;
+  }
+
+  nav(){
+    this.router.navigate(['/']);
   }
 
 }
