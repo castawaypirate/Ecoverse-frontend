@@ -16,9 +16,9 @@ export class UserPostsComponent implements OnInit {
   constructor(private srvc: UserPostsService) { }
 
   ngOnInit(): void {
-    this.srvc.getPosts(1).subscribe((data: IPost[]) => {
+    this.srvc.getPosts().subscribe( data => {
       console.log(data)
-      this.posts =data;
+      this.posts = data;
     });
   }
 

@@ -47,16 +47,15 @@ import { SignGuard } from './_helpers/sign.guard';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
-    ],
+    HttpClientModule,
+    JwPaginationModule
+  ],
   providers: [
     UserService,
     AuthService,
     AuthGuard,
     SignGuard,
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
-    HttpClientModule,
-    JwPaginationModule
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
