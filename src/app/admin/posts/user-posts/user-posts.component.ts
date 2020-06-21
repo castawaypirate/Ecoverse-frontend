@@ -28,8 +28,4 @@ export class UserPostsComponent implements OnInit {
     this.pageOfPosts = pageOfPosts;
   }
 
-  nav(){
-    this.router.navigate(['/']);
-  }
-
 }

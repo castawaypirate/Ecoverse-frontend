@@ -1,14 +1,13 @@
 <div class="main_box">
+  <button routerLink="create" class="crt">Create New Post</button>
   <div class="post" *ngFor="let post of pageOfPosts">
     <div class="cont">
-      <span>{{post.author_id}}</span>
       <span>{{post.title}}</span>
-      <span>{{post.id}}</span>
-      <a routerLink="/admin/posts/{{post.id}}"><i class="fa fa-pen"></i></a>
     </div>
-    <i class="fa fa-trash"></i>
+    <a routerLink="/post/{{post.id}}"><i class="fa fa-eye"></i></a>
+    <a [routerLink]="post.id"><i class="fa fa-pen"></i></a>
+    <a class="remove"><i class="fa fa-trash"></i></a>
   </div>
-  <button (click)='nav()' class="crt">Create Post</button>
   <jw-pagination [items]="posts" (changePage)="onChangePage($event)"></jw-pagination>
 
 </div>

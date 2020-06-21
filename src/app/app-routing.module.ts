@@ -84,12 +84,12 @@ const routes: Routes = [
             component: UserPostsComponent,
           },
           {
-            path: ':id',
-            component: PostComponent,
+            path: 'create',
+            component: CreatePostComponent,
           },
           {
-            path: 'create_post',
-            component: CreatePostComponent,
+            path: ':id',
+            component: PostComponent,
           }
         ]
       },

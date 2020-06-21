@@ -1,8 +1,10 @@
 <div class="cont">
   <ul>
+    <button routerLink="create" class="crt">Create New Team</button>
     <li class="tm" *ngFor="let team of teams">
-        <button class="btn" routerLink="edit/{{team.id}}">{{ team.name }}<i class="fa fa-pen"></i></button><i class="fa fa-trash"></i>
+        <button class="btn">{{ team.name }}</button>
+        <a routerLink="edit/{{team.id}}"><i class="fa fa-pen"></i></a>
+        <a class="remove"><i class="fa fa-trash"></i></a>
     </li>
-    <button (click)='nav()' class="crt">Create Team</button>
 </ul>
 </div>

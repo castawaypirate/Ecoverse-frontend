@@ -13,6 +13,7 @@
 }
 
 .btn {
+  cursor: default;
   width: 100%;
   padding: 1rem;
   margin: 5px;
@@ -21,16 +22,17 @@
   background-color: var(--color-secondary);
 }
 
-.btn:hover {
-  background-color: var(--color-secondary-dark);
-}
-
 .fa-pen {
   margin-left: 10px;
 }
 
-.fa-trash {
-  font-size: 25px;
+.remove:hover {
+  cursor: pointer;
+  color: var(--color-danger) !important;
+}
+
+.fa {
+  font-size: 20px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -41,10 +43,11 @@
 }
 
 .crt {
-  width: 10%;
+  width: 200px;
   padding: 0.8rem;
   border-radius: 10px;
-  font-size: large;
+  font-size: 14px;
+  color: white;
   font-weight: bold;
   outline-width: 0px;
   border-width:0;
