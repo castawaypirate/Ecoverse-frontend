@@ -5,9 +5,15 @@ import { ContactComponent } from './contact/contact.component';
 import { SignComponent } from './sign/sign.component';
 import { AboutComponent } from "./about/about.component";
 import { NewsComponent } from './news/news.component';
-import { CreatePostComponent} from "./create-post/create-post.component";
-import { PostComponent} from "./post/post.component";
-import {UserPostsComponent} from "./user-posts/user-posts.component";
+import { UserprofileComponent } from './admin/userprofile/userprofile.component';
+import { HeaderpanelComponent } from './admin/headerpanel/headerpanel.component';
+import { AuthGuard } from './_helpers/auth.guard';
+import { SignGuard } from './_helpers/sign.guard';
+import { CreatePostComponent } from "./admin/posts/create-post/create-post.component";
+import { PostComponent } from "./admin/posts/post/post.component";
+import { UserPostsComponent } from "./admin/posts/user-posts/user-posts.component";
+import { AdminComponent } from './admin/admin.component';
+import { PublicComponent } from './public/public.component';
 import { CreateTeamComponent } from './team/create-team/create-team.component';
 import { EditTeamComponent } from './team/edit-team/edit-team.component';
 import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
@@ -15,79 +21,100 @@ import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
 import { SingleTeamComponent } from './team/single-team/single-team.component';
 
 
-
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomepageComponent,
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
-  },
-  {
-    path: 'sign',
-    component: SignComponent,
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
-  },
-  {
-    path: 'news',
-    component: NewsComponent,
-  },
-  {
-    path: 'create_post',
-    component: CreatePostComponent,
-  },
-  {
-    path: 'post',
-    component: PostComponent,
-  },
-  {
-    path:'user_posts',
-    component: UserPostsComponent,
-  },
-  {
-    path:'admin_team',
-    children: [
-      {
-        path: '',
-        component: EditTeamsComponent
-      },
-      {
-        path: 'create',
-        component: CreateTeamComponent
-      },
-      {
-        path: 'edit/:id',
-        component: EditTeamComponent
-      }
-    ]
-  },
-  {
-    path:'team',
-    children: [
-      {
-        path: '',
-        component: ShowTeamsComponent
-      },
-      {
-        path: ':id',
-        component: SingleTeamComponent
-      },
-    ]
+    path: '',
+    component: PublicComponent,
+    children:
+      [
+        {
+          path: '',
+          component: HomepageComponent,
+        },
+        {
+          path: 'contact',
+          component: ContactComponent,
+        },
+        {
+          path: 'sign',
+          component: SignComponent, canActivate: [SignGuard],
+        },
+        {
+          path: 'about',
+          component: AboutComponent,
+        },
+        {
+          path: 'news',
+          component: NewsComponent,
+        },
+        {
+          path:'teams',
+          children: [
+            {
+              path: '',
+              component: ShowTeamsComponent
+            },
+            {
+              path: ':id',
+              component: SingleTeamComponent
+            },
+          ]
+        },
+      ]
   },
 
   {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+    path: 'admin',
+    canActivate: [AuthGuard],
+    component: AdminComponent,
+    children: [
+      {
+        path: '',
+        component: UserprofileComponent,
+      },
+      {
+        path: 'headerpanel',
+        component: HeaderpanelComponent,
+      },
+      {
+        path: 'posts',
+        children: [
+          {
+            path: '',
+            component: UserPostsComponent,
+          },
+          {
+            path: ':id',
+            component: PostComponent,
+          },
+          {
+            path: 'create_post',
+            component: CreatePostComponent,
+          }
+        ]
+      },
+      {
+        path:'teams',
+        children: [
+          {
+            path: '',
+            component: EditTeamsComponent
+          },
+          {
+            path: 'create',
+            component: CreateTeamComponent
+          },
+          {
+            path: 'edit/:id',
+            component: EditTeamComponent
+          }
+        ]
+      },
+    ]
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/',
     pathMatch: 'full'
   }
 ];

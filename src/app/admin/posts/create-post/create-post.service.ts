@@ -5,18 +5,19 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 import {IPost} from "./ipost";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CreatePostService {
 
-  private url: string = "http://localhost:8000/api/posts";
+  private url: string = environment.apiUrl + "/posts";
 
   constructor(private http: HttpClient) { }
 
   addPost(post: IPost): Observable<IPost>{
-    return this.http.post<IPost>("http://localhost:8000/api/posts",post);
+    return this.http.post<IPost>(this.url,post);
 
   }
 
