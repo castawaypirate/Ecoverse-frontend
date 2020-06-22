@@ -33,6 +33,7 @@ import { SignGuard } from './_helpers/sign.guard';
 import { AdminComponent } from './admin/admin.component';
 import { PublicComponent } from './public/public.component';
 import { FeedComponent } from './feed/feed.component';
+import { SinglePostComponent } from './single-post/single-post.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { FeedComponent } from './feed/feed.component';
     SingleTeamComponent,
     AdminComponent,
     PublicComponent,
-    FeedComponent
+    FeedComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,

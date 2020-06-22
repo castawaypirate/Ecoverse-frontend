@@ -25,4 +25,8 @@ export class UserPostsService {
   deletePost(id){
     return this.http.delete(this.url + '/' + id);
   }
+
+  handleLike(id) {
+    return this.http.post(this.url + '/' + id + '/like', []);
+  }
 }

@@ -6,6 +6,8 @@ export interface IPost {
   summary: string;
   image: string;
   public: boolean;
+  likes_count?: number;
+  likes_users_ids: string[];
   created_at: Date;
   updated_at: Date;
 }

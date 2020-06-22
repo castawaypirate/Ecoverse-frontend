@@ -58,6 +58,10 @@
   margin-bottom: 10px;
 }
 
+.liked {
+  color: var(--color-primary) !important;
+}
+
 @media screen and (max-width: 767px) {
   .border_image img{
     height: auto;

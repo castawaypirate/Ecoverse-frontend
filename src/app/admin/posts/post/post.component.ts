@@ -3,6 +3,7 @@ import { UserPostsService } from '../user-posts/user-posts.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { IPost } from '../create-post/ipost';
 import { Title, Meta } from '@angular/platform-browser';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-post',
@@ -11,8 +12,11 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class PostComponent implements OnInit {
   post: IPost;
+  liked = false;
+  auth = true;
 
-  constructor(private postSrv: UserPostsService, private title: Title , private meta: Meta, private router: Router, private actRoute: ActivatedRoute) { }
+  constructor(private postSrv: UserPostsService, private title: Title , private meta: Meta, private router: Router, 
+    private actRoute: ActivatedRoute, private authSrv: AuthService) { }
 
   ngOnInit(): void {
     const id = this.actRoute.snapshot.paramMap.get('id');
@@ -21,11 +25,28 @@ export class PostComponent implements OnInit {
       res => {
         this.post = res;
         document.title = this.post.title;
+        if (this.authSrv.isAuth()) {
+          this.auth = true;
+          if (this.post.likes_users_ids.includes(this.authSrv.getUser().id)) {
+            this.liked = true;
+          }
+        }
       }, err => {
         this.router.navigate(['/admin/posts']);
         console.log(err);
       }
-    )
+    );
+  }
+
+  handleLike() {
+    this.postSrv.handleLike(this.post.id)
+      .subscribe(
+        res => {
+          this.liked = !this.liked;
+        }, err => {
+          console.log(err);
+        }
+      );
   }
 
 }
