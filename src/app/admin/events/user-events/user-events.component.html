@@ -1,0 +1,13 @@
+<div class="container">
+  <button routerLink="create" class="crt">Create New Event</button>
+  <div class="post" *ngFor="let post of pageOfPosts">
+    <div class="cont">
+      <span>{{post.title}}</span>
+    </div>
+    <a routerLink="/event/{{post.event_id}}"><i class="fa fa-eye"></i></a>
+    <a [routerLink]="post.event_id"><i class="fa fa-pen"></i></a>
+    <a class="remove" (click)="deletePost(post.event_id)"><i class="fa fa-trash"></i></a>
+  </div>
+  <jw-pagination [items]="posts" (changePage)="onChangePage($event)"></jw-pagination>
+
+</div>

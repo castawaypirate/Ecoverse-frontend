@@ -21,7 +21,10 @@ import { ShowTeamsComponent } from './team/show-teams/show-teams.component';
 import { EditTeamsComponent } from './team/edit-teams/edit-teams.component';
 import { SingleTeamComponent } from './team/single-team/single-team.component';
 import { FeedComponent } from './feed/feed.component';
-
+import { CreateEventComponent } from "./admin/events/create-event/create-event.component";
+import {EditEventComponent} from "./admin/events/edit-event/edit-event.component";
+import { EventComponent } from "./admin/events/event/event.component";
+import { UserEventsComponent } from "./admin/events/user-events/user-events.component";
 
 
 const routes: Routes = [
@@ -53,6 +56,10 @@ const routes: Routes = [
         {
           path: 'post/:id',
           component: PostComponent,
+        },
+        {
+          path: 'event/:id',
+          component: EventComponent,
         },
         {
           path:'teams',
@@ -101,6 +108,23 @@ const routes: Routes = [
           {
             path: ':id',
             component: EditPostComponent,
+          }
+        ]
+      },
+      {
+        path: 'events',
+        children: [
+          {
+            path: '',
+            component: UserEventsComponent,
+          },
+          {
+            path: 'create',
+            component: CreateEventComponent,
+          },
+          {
+            path: ':id',
+            component: EditEventComponent,
           }
         ]
       },

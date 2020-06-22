@@ -1,28 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import {IPost} from "../create-post/ipost";
+import {IPost} from "../../posts/create-post/ipost";
+import { Ievent} from "../create-event/ievent";
 import { environment } from 'src/environments/environment';
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserPostsService {
+export class UserEventsService {
 
-  private url: string = environment.apiUrl + "/posts";
+  private url: string = environment.apiUrl + "/events";
 
   constructor(private http: HttpClient) { }
 
-  getPost(id) {
-    return this.http.get<IPost>(this.url + '/' + id);
+  getEvent(id) {
+    return this.http.get<Ievent>(this.url + '/' + id);
   }
 
-  getPosts(){
+  getEvents(){
     return this.http.get<IPost[]>(this.url + '/author');
   }
 
-  deletePost(id){
+  deleteEvent(id){
     return this.http.delete(this.url + '/' + id);
   }
 }

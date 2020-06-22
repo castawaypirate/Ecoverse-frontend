@@ -1,8 +1,8 @@
 <div class="whole">
-  <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
     <div class="main_box">
       <div class="title">
-        <b style="font-size: 20px">Add post title</b>
+        <b style="font-size: 20px">Add event title</b>
         <input type="text" id="title" formControlName="title" [(ngModel)]="prevPost.title">
         <label for="title" title="Title" data-title="Title"></label>
       </div>
@@ -12,7 +12,7 @@
         <button (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit">
           <i class="fas fa-upload"></i></button>
         <input #fileInput (change)="fileUpload(fileInput)" type="file">
-        <b style="font-size: 20px">Post Content</b>
+        <b style="font-size: 20px">Event Content</b>
         <textarea formControlName="content"[(ngModel)]="prevPost.content"></textarea>
       </div>
       <div class="summary">
@@ -26,23 +26,20 @@
           <p style="margin-left: 8px">Public:</p>
           <input type="checkbox" formControlName="public" [(ngModel)]="prevPost.public">
         </div>
+        <div class="public">
+          <p>Starts at:</p>
+          <input style="margin-left: 8px" type="datetime-local" formControlName="start" ngModel="{{prevEvent.start.toString().replace(' ', 'T').split(':00')[0]}}">
+        </div>
+        <div class="public">
+          <p>Ends at:</p>
+          <input style="margin-left: 8px" type="datetime-local" formControlName="end" ngModel="{{prevEvent.end.toString().replace(' ', 'T').split(':00')[0]}}">
+        </div>
+        <div class="public">
+          <p>Location:</p>
+          <input style="margin-left: 8px" type="text" formControlName="place" [(ngModel)]="prevEvent.place">
+        </div>
         <button type="submit">Edit</button>
       </div>
     </div>
   </form>
 </div>
-
-
-<!--
-<div class="side_box">
-  <div class="publish">
-    <b>Publish</b>
-    <div class="public">
-      <img src="https://img.icons8.com/material-sharp/24/000000/visible.png" style="width: 20px; height: 20px;">
-      <p style="margin-left: 8px">Public:</p>
-      <input type="checkbox">
-    </div>
-    <button>Publish</button>
-  </div>
-</div>
--->

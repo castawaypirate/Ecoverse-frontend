@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./edit-post.component.scss']
 })
 export class EditPostComponent implements OnInit {
-  public post: IPost
+  public post: IPost;
   public prevPost;
 
   constructor(private fb: FormBuilder, private httpClient: HttpClient, private title: Title , private meta: Meta, private postService: EditPostService, private actRoute: ActivatedRoute) { }

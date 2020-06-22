@@ -23,13 +23,12 @@ input[id="title"], select {
   flex-direction: column;
 }
 button{
-  width: 100px;
+  width: 72px;
   justify-content: center;
   align-items: center;
-  height: 20px;
   font-size: 12px;
-  margin-top: 8px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 button img{
@@ -93,6 +92,7 @@ form{
   height: 100%;
   font-size: 14px ;
   justify-content: center;
+  margin: 8px;
 }
 
 .publish button{
