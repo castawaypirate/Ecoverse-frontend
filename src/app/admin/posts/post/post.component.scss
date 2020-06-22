@@ -16,11 +16,12 @@
   align-items: center;
 }
 
-.border_image{
+.border_image {
   margin-bottom: 10px;
   width: 100%;
 }
-.border_image img{
+
+.border_image img {
   object-fit: cover;
   height: 450px;
   width: 100%;
@@ -62,8 +63,35 @@
   color: var(--color-primary) !important;
 }
 
+.actions {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.answerForm {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 767px) {
-  .border_image img{
+  .border_image img {
     height: auto;
   }
 }

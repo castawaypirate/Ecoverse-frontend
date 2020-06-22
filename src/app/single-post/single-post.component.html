@@ -8,7 +8,7 @@
       </a>
       <div *ngIf="auth" class="actions">
         <button class="btn" [class.liked]="liked" (click)="handleLike()"><span class="fas fa-tree"></span> Like {{likes}}</button>
-        <button class="btn comment" routerLink="/post/{{post.id}}" fragment="comments">Comment</button>
+        <button class="btn comment" routerLink="/post/{{post.id}}" fragment="comments">Comments</button>
       </div>
     </div>
   </div>
