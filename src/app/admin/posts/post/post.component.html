@@ -13,7 +13,7 @@
     <p>{{post?.updated_at.toString().split('T')[0]}}</p>
   </div>
   <div *ngIf="auth" class="actions">
-    <button class="btn" [class.liked]="liked" (click)="handleLike()"><span class="fas fa-tree"></span> Like</button>
+    <button class="btn" [class.liked]="liked" (click)="handleLike()"><span class="fas fa-tree"></span> Like {{ likes }}</button>
     <button class="btn comment" routerLink="/post/{{post.id}}" fragment="comments">Comment</button>
   </div>
 </div>

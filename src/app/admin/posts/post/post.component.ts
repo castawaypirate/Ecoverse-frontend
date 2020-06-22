@@ -13,6 +13,7 @@ import { AuthService } from 'src/app/_services/auth.service';
 export class PostComponent implements OnInit {
   post: IPost;
   liked = false;
+  likes;
   auth = true;
 
   constructor(private postSrv: UserPostsService, private title: Title , private meta: Meta, private router: Router, 
@@ -31,6 +32,7 @@ export class PostComponent implements OnInit {
             this.liked = true;
           }
         }
+        this.likes = this.post.likes_count;
       }, err => {
         this.router.navigate(['/admin/posts']);
         console.log(err);
@@ -43,6 +45,7 @@ export class PostComponent implements OnInit {
       .subscribe(
         res => {
           this.liked = !this.liked;
+          this.liked ? this.likes++ : this.likes--;
         }, err => {
           console.log(err);
         }

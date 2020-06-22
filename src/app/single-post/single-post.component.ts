@@ -13,10 +13,12 @@ export class SinglePostComponent implements OnInit {
   @Input() post:IPost;
   auth = false;
   liked = false;
+  likes;
 
   constructor(private authSrv: AuthService, private postSrv: UserPostsService) { }
 
   ngOnInit(): void {
+    this.likes = this.post.likes_count;
     if (this.authSrv.isAuth()) {
       this.auth = true;
       if (this.post.likes_users_ids.includes(this.authSrv.getUser().id)) {
@@ -30,6 +32,7 @@ export class SinglePostComponent implements OnInit {
       .subscribe(
         res => {
           this.liked = !this.liked;
+          this.liked ? this.likes++ : this.likes--;
         }, err => {
           console.log(err);
         }

@@ -16,7 +16,7 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.title.setTitle('News');
     this.meta.updateTag({ name: 'description', content: 'Events, Announcements, Articles, Warnings, News Page'});
-    this.postSrv.getPosts().subscribe(
+    this.postSrv.getAllPosts().subscribe(
       res => {
         this.posts = res;
       }, err => {
