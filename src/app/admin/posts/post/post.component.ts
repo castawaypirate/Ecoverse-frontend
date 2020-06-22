@@ -14,7 +14,7 @@ export class PostComponent implements OnInit {
   post: IPost;
   liked = false;
   likes;
-  auth = true;
+  auth = false;
 
   constructor(private postSrv: UserPostsService, private title: Title , private meta: Meta, private router: Router, 
     private actRoute: ActivatedRoute, private authSrv: AuthService) { }
