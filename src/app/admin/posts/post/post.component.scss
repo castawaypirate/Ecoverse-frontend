@@ -76,7 +76,23 @@
   flex-direction: column;
   align-items: center;
 }
+.comments form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.comments textarea{
+  width: 500px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.comments button{
+  width: 150px;
+  height: 40px;
+  margin-bottom: 10px;
+}
 .answerForm {
   z-index: 10;
   position: fixed;
