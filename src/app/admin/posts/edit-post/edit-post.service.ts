@@ -4,12 +4,13 @@ import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import {IPost} from "../create-post/ipost";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EditPostService {
-  private url: string = "http://localhost:8000/api/posts";
+  private url: string = environment.apiUrl + "/posts";
 
   constructor(private http: HttpClient) { }
 

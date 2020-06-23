@@ -1,11 +1,12 @@
 export interface IPost {
   id: number;
   author_id: number;
-  title: string,
+  title: string;
   content: string;
   summary: string;
   image: string;
   public: boolean;
+  event_id: number;
   likes_count?: number;
   likes_users_ids?: string[];
   comments: any[];

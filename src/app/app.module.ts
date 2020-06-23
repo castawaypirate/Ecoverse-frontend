@@ -33,6 +33,10 @@ import { SignGuard } from './_helpers/sign.guard';
 import { AdminComponent } from './admin/admin.component';
 import { PublicComponent } from './public/public.component';
 import { FeedComponent } from './feed/feed.component';
+import { CreateEventComponent } from "./admin/events/create-event/create-event.component";
+import { EditEventComponent } from './admin/events/edit-event/edit-event.component';
+import { EventComponent } from './admin/events/event/event.component';
+import { UserEventsComponent } from './admin/events/user-events/user-events.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 
 @NgModule({
@@ -59,6 +63,10 @@ import { SinglePostComponent } from './single-post/single-post.component';
     AdminComponent,
     PublicComponent,
     FeedComponent,
+    CreateEventComponent,
+    EditEventComponent,
+    EventComponent,
+    UserEventsComponent,
     SinglePostComponent
   ],
   imports: [
