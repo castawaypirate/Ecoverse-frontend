@@ -1,15 +1,6 @@
 <div class="container">
   <div class="news">
-    <div class="box" *ngFor="let post of posts">
-      <img class="card-img" src="{{ post.image ? post.image : 'assets/images/dull.jpg' }}">
-      <div class="boxquote">
-        <a routerLink="/post/{{ post.id }}">
-          <h3>{{ post.title }}</h3>
-          <span class="date">publication date: {{ post.created_at }}</span>
-          <p>{{ post.summary }}</p>
-        </a>
-      </div>
-    </div>
+    <app-single-post class="post" *ngFor="let post of posts" [post]="post"></app-single-post>
   </div>
 
   <div class="articles">

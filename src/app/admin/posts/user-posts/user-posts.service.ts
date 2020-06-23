@@ -22,7 +22,15 @@ export class UserPostsService {
     return this.http.get<IPost[]>(this.url + '/author');
   }
 
+  getAllPosts() {
+    return this.http.get<IPost[]>(this.url + '/');
+  }
+
   deletePost(id){
     return this.http.delete(this.url + '/' + id);
+  }
+
+  handleLike(id) {
+    return this.http.post(this.url + '/' + id + '/like', []);
   }
 }

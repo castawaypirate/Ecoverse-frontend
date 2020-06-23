@@ -24,16 +24,15 @@ $danger: var(--color-danger);
     display: flex;
     flex-direction: column;
   }
-  button{
-    width: 100px;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
-    font-size: 12px;
-    margin-top: 8px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
+button{
+  width: 72px;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
   button img{
     width: 12px;
     height: 12px;
@@ -136,5 +135,15 @@ $danger: var(--color-danger);
     flex-direction: column;
     padding: 0.5rem;
   }
+
+  .members button{
+    width: 150px;
+    height: 50px;
+  }
+
+  .members span{
+    margin-right: 5px;
+  }
+
 
 

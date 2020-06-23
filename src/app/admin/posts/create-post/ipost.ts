@@ -7,6 +7,9 @@ export interface IPost {
   image: string;
   public: boolean;
   event_id: number;
+  likes_count?: number;
+  likes_users_ids?: string[];
+  comments: any[];
   created_at: Date;
   updated_at: Date;
 }

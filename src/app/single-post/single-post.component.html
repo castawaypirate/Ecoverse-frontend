@@ -1,0 +1,14 @@
+<div class="box">
+    <img class="card-img" src="{{ post.image ? post.image : 'assets/images/dull.jpg' }}">
+    <div class="boxquote">
+      <a routerLink="/post/{{ post.id }}">
+        <h3>{{ post.title }}</h3>
+        <span class="date">publication date: {{ post.created_at }}</span>
+        <p>{{ post.summary }}</p>
+      </a>
+      <div *ngIf="auth" class="actions">
+        <button class="btn" [class.liked]="liked" (click)="handleLike()"><span class="fas fa-tree"></span> Like {{likes}}</button>
+        <button class="btn comment" routerLink="/post/{{post.id}}" fragment="comments">Comments</button>
+      </div>
+    </div>
+  </div>
