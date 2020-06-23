@@ -45,6 +45,10 @@
   justify-content: center;
   align-items: center;
   word-spacing: 2px;
+  margin-left: 30px;
+  padding: 1rem;
+  border-style: groove;
+  border-color: black;
 }
 
 .info {
@@ -104,6 +108,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.comment_section{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+}
+
+.comment{
+}
+
+.comment_section button{
+  width: 150px;
+  height: 50px;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.com_but{
+  margin: 0 10px;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 767px) {

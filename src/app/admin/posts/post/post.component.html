@@ -28,12 +28,14 @@
           <button type="button" class="btn btn-secondary" (click)="hideAnswer()">Cancel</button>
         </form>
       </div>
-      <div *ngFor="let comment of post?.comments">
+      <div *ngFor="let comment of post?.comments" class="comment_section">
         <div class="comment">
           <p>{{ comment.author.username }} wrote:</p>
           <p class="content">{{ comment.content }}</p>
-          <button class="btn btn-primary" (click)="showAnswer(comment.comments, comment)">Answer to comment</button>
-          <button *ngIf="comment.author.username == user.username" class="btn btn-secondary">Edit comment</button>
+          <div class="com_but">
+            <button class="btn btn-primary" (click)="showAnswer(comment.comments, comment)">Answer to comment</button>
+            <button *ngIf="comment.author.username == user.username" class="btn btn-secondary">Edit comment</button>
+          </div>
         </div>
         <div *ngFor="let subComment of comment.comments">
           <div class="comment">
