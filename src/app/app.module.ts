@@ -37,6 +37,7 @@ import { CreateEventComponent } from "./admin/events/create-event/create-event.c
 import { EditEventComponent } from './admin/events/edit-event/edit-event.component';
 import { EventComponent } from './admin/events/event/event.component';
 import { UserEventsComponent } from './admin/events/user-events/user-events.component';
+import { SinglePostComponent } from './single-post/single-post.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { UserEventsComponent } from './admin/events/user-events/user-events.comp
     CreateEventComponent,
     EditEventComponent,
     EventComponent,
-    UserEventsComponent
+    UserEventsComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,

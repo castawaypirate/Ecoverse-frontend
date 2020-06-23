@@ -48,6 +48,7 @@ export class HeaderpanelComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('userToken');
+    localStorage.removeItem('user');
     localStorage.removeItem('id');
     this.router.navigate(['/sign']);
   }

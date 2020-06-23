@@ -57,6 +57,8 @@ export class SignComponent implements OnInit {
       auth=>{this.auth=auth,
         localStorage.setItem('userToken',
         this.auth.accessToken),
+        localStorage.setItem('user',
+        JSON.stringify(this.auth.user)),
         this.router.navigate(['/userprofile'])},
         err => {console.log(err)});
   }

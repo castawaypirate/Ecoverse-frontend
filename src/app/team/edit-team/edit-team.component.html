@@ -8,8 +8,9 @@
       </div>
 
       <div class="content">
-        <button (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit"><i
-          class="fas fa-upload"></i>Add featured image</button>
+        <b style="font-size: 20px">Upload featured image</b>
+        <button (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit">
+          <i class="fas fa-upload"></i></button>
         <input #fileInput (change)="fileUpload(fileInput)" type="file">
         <b style="font-size: 20px">Team Description</b>
         <textarea formControlName="description"></textarea>

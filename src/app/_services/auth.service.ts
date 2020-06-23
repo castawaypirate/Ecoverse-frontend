@@ -25,4 +25,12 @@ export class AuthService {
   getToken(){
     return localStorage.getItem('userToken');
   }
+
+  getUser() {
+    return JSON.parse(localStorage.getItem('user'));
+  }
+
+  isAuth() {
+    return localStorage.getItem('userToken') ? true : false;
+  }
 }
