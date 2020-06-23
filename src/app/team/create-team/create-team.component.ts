@@ -14,8 +14,7 @@ export class CreateTeamComponent implements OnInit {
     name: ['', Validators.required],
     description: ['', Validators.required],
     public: [1, Validators.required],
-    members: [''],
-    image: null
+    members: ['']
   });
 
   constructor(private fb: FormBuilder, private teamSrv: TeamService, private router: Router) { }

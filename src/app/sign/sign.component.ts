@@ -49,6 +49,8 @@ export class SignComponent implements OnInit {
     this._userService.addUser(this.user).subscribe(auth=>{this.auth=auth,
       localStorage.setItem('userToken',
       this.auth.accessToken),
+      localStorage.setItem('user',
+        JSON.stringify(this.auth.user)),
       this.router.navigate(['/userprofile'])});
   }
 
