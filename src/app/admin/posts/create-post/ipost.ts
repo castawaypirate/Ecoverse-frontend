@@ -1,3 +1,5 @@
+import { Ievent } from '../../events/create-event/ievent';
+
 export interface IPost {
   id: number;
   author_id: number;
@@ -7,6 +9,7 @@ export interface IPost {
   image: string;
   public: boolean;
   event_id: number;
+  event: Ievent;
   likes_count?: number;
   likes_users_ids?: string[];
   comments: any[];
