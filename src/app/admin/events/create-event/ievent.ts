@@ -2,8 +2,8 @@ import DateTimeFormat = Intl.DateTimeFormat;
 
 export interface Ievent {
   id: number;
-  title: string;
-  content: string;
+  // title: string;
+  // content: string;
   start: Date;
   end: Date;
   place: string;

@@ -16,7 +16,7 @@ import { UserPostsService } from "../../posts/user-posts/user-posts.service";
 })
 export class EditEventComponent implements OnInit {
   public event: Ievent;
-  public prevEvent;
+  public prevEvent: Ievent;
   public prevPost;
   public ready = false;
 
@@ -39,6 +39,8 @@ export class EditEventComponent implements OnInit {
     this.eventService.getEvent(id).subscribe((data: Ievent) => {
       this.prevEvent = data;
       console.log(this.prevEvent);
+      this.eventForm.controls.start.setValue(this.prevEvent.start.toString().split(' ')[0]);
+      this.eventForm.controls.end.setValue(this.prevEvent.end.toString().split(' ')[0]);
       this.usrSrv.getPost(this.prevEvent.post_id).subscribe((res: IPost) => {
         this.prevPost = res;
         console.log(this.prevPost);

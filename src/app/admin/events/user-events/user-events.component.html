@@ -4,8 +4,8 @@
     <div class="cont">
       <span>{{post.title}}</span>
     </div>
-    <a routerLink="/event/{{post.id}}"><i class="fa fa-eye"></i></a>
-    <a [routerLink]="post.id"><i class="fa fa-pen"></i></a>
+    <a routerLink="/event/{{post.event.id}}"><i class="fa fa-eye"></i></a>
+    <a [routerLink]="post.event.id"><i class="fa fa-pen"></i></a>
     <a class="remove" (click)="deletePost(post.id)"><i class="fa fa-trash"></i></a>
   </div>
   <jw-pagination [items]="posts" (changePage)="onChangePage($event)"></jw-pagination>
