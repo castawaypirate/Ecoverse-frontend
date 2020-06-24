@@ -21,6 +21,9 @@ export class EventComponent implements OnInit {
     this.meta.updateTag({ name: 'description', content: 'Event Content' });
     this.eventSrv.getEvent(id).subscribe(
       res => {
+        if (!res.id) {
+          this.router.navigate['/news'];
+        }
         console.log(res);
         this.event = res;
         this.postSrv.getPost(this.event.post_id).subscribe(res=>{
@@ -30,7 +33,7 @@ export class EventComponent implements OnInit {
         });
 
       }, err => {
-        this.router.navigate(['/admin/posts']);
+        this.router.navigate['/news'];
         console.log(err);
       }
     )

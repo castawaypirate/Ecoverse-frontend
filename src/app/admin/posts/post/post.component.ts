@@ -36,6 +36,9 @@ export class PostComponent implements OnInit {
     this.meta.updateTag({ name: 'description', content: 'Post Content' });
     this.postSrv.getPost(id).subscribe(
       res => {
+        if (!res.id) {
+          this.router.navigate(['/news']);
+        }
         this.post = res;
         console.log(this.post);
         document.title = this.post.title;

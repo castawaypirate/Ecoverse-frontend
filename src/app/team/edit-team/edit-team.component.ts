@@ -17,6 +17,7 @@ export class EditTeamComponent implements OnInit {
     public: [0, Validators.required],
     members: [[]],
     pending_members: [[]],
+    image: ''
   });
   users;
 

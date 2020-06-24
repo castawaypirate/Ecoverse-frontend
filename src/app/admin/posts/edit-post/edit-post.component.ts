@@ -20,7 +20,7 @@ export class EditPostComponent implements OnInit {
   postForm = this.fb.group({
     title:['', Validators.required],
     content:['', Validators.required],
-    image: null,
+    image: '',
     public: 0
   })
 

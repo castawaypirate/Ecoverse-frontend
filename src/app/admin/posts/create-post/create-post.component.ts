@@ -18,7 +18,8 @@ export class CreatePostComponent implements OnInit {
   postForm = this.fb.group({
     title:['', Validators.required],
     content:['', Validators.required],
-    public: 0
+    public: 0,
+    image: ''
   })
 
   ngOnInit(): void {
