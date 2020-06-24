@@ -2,42 +2,42 @@
   <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
     <div class="main_box">
       <div class="title">
-        <b style="font-size: 20px">Add team title</b>
+        <b i18n style="font-size: 20px">Add team title</b>
         <input type="text" id="title" placeholder="Enter title here" formControlName="name">
         <label for="title" title="Title" data-title="Title"></label>
       </div>
 
       <div class="content">
-        <b style="font-size: 20px">Upload featured image</b>
+        <b i18n style="font-size: 20px">Upload featured image</b>
         <button (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit">
           <i class="fas fa-upload"></i></button>
         <input #fileInput (change)="fileUpload(fileInput)" type="file">
-        <b style="font-size: 20px">Team Description</b>
+        <b i18n style="font-size: 20px">Team Description</b>
         <textarea formControlName="description"></textarea>
       </div>
       <div class="members">
-          <label>Members</label>
+          <label i18n>Members</label>
           <ul formArrayName="members">
             <li *ngFor="let member of members; index as i">{{ member.data.name }}
-              <button (click)="removeMember(i, member.id)"><span class="fas fa-times"></span>Remove member</button></li>
+              <button i18n (click)="removeMember(i, member.id)"><span class="fas fa-times"></span>Remove member</button></li>
           </ul>
       </div>
       <div class="applicants">
-        <label>Applicants</label>
+        <label i18n>Applicants</label>
           <ul formArrayName="pending_members">
             <li *ngFor="let member of pending_members; index as i">{{ member.data.email }}
-              <button (click)="acceptMember(i, member.id)"><span class="fas fa-times"></span>Accept member</button>
-              <button (click)="removeApplicant(i, member.id)"><span class="fas fa-times"></span>Reject member</button></li>
+              <button i18n (click)="acceptMember(i, member.id)"><span class="fas fa-times"></span>Accept member</button>
+              <button i18n (click)="removeApplicant(i, member.id)"><span class="fas fa-times"></span>Reject member</button></li>
           </ul>
       </div>
       <div class="publish">
-        <b>Publish</b>
+        <b i18n>Publish</b>
         <div class="public">
           <img src="https://img.icons8.com/material-sharp/24/000000/visible.png" style="width: 20px; height: 20px;">
           <p style="margin-left: 8px">Public:</p>
           <input type="checkbox" formControlName="public">
         </div>
-        <button type="submit">Save</button>
+        <button i18n type="submit">Save</button>
       </div>
     </div>
   </form>

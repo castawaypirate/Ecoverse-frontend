@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="e8d37bbdba2f259a253a73a858376a16d07799bf" datatype="html">
+        <source>Dont stay with tied hands. Save the environment today!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1801bfa6ba6eb7a02fd61bafb37e35f5d0aebfdc" datatype="html">
+        <source>Learn More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="57a8247144b5244a69f9165c4bc80670d4f60967" datatype="html">
+        <source>Start Now!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1d0974afae70914072a4fbf19e53328e517bae73" datatype="html">
+        <source>News</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="76f3dbd0b2d8f1d1003fcecfea9cf5b6f145e082" datatype="html">
+        <source>About us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="34746fb1c7f3d2194d99652bdff89e6e14c9c4f4" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="da7927c7a08a93bf180a321fe7e4c29705cb1d65" datatype="html">
+        <source>Sign</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c53dfdadddc7b273928981315a96526724c69b66" datatype="html">
+        <source>Feed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d853d925bd4df5ed7466507081fcebacb3dd3a81" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Find us through:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ca962714440ede59dcfec06378fef38e13e06a24" datatype="html">
+        <source>Phone: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5e38f4b449ac6aecc281dfd7f10210d3dce4673a" datatype="html">
+        <source>Follow us:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d207cc1965ec0c29e594e0e9917f39bfc276ed87" datatype="html">
+        <source>Create an account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sign/sign.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="287d3301a32a65a1b31116bda5d3a6463158c42a" datatype="html">
+        <source>Sign in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sign/sign.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sign/sign.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="80d7b22e10ccae0097bcc7553920373a6e6b99a8" datatype="html">
+        <source>By creating an account you agree to our <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Terms &amp; Privacy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sign/sign.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3a8e04b34236be1cb450987973bcb7b33d483e35" datatype="html">
+        <source>Forgot password?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sign/sign.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d8abd437e50fdf582ef9f427917ee4bb9db55707" datatype="html">
+        <source>We are students of the Aristotle University of Thessaloniki</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="100a6e85cd57284623055b3e0e32bf2f0631c4ec" datatype="html">
+        <source>We are simply a group of people with a plan to make our University ,
+    and why not our city , country or even the world , a better and healthier place for their people.
+    Our goal for the time being is to inspire other students to cooperate with us into taking better care of our University
+    by organizing cleaning events, growing plants, and other respectful events towards the environment of the place we
+    spend a lot of our time at!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b65bf7946ccaa5282ca7a893093df2b84ac2482c" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Upload Image</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/userprofile/userprofile.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ceeadefdfdba86aa6e4bb20596b10253650570e4" datatype="html">
+        <source>First Name : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/userprofile/userprofile.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="990936a21ecd5300371cb363cb3f7e854e97c4fd" datatype="html">
+        <source>Last Name : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/userprofile/userprofile.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="577a59993ded9d69a441ebf636f18f10a4069bb8" datatype="html">
+        <source>Email : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/userprofile/userprofile.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f17380a298297b180d576bdb61b3e47e16b659c3" datatype="html">
+        <source>Location : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/userprofile/userprofile.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6b025ea54662bf32be36519d3cbe929fea7e0aca" datatype="html">
+        <source>Birthday : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/userprofile/userprofile.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="28f86ffd419b869711aa13f5e5ff54be6d70731c" datatype="html">
+        <source>Edit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/userprofile/userprofile.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/userprofile/userprofile.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="39ce32bbdc5ea1fe886bce9483a9e45f937ea401" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/headerpanel/headerpanel.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b32dc92fb8fe0b1adc913928df83d6378c571f6b" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Posts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/headerpanel/headerpanel.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f7280682528877baceab693e532aa224133ce322" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Events</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/headerpanel/headerpanel.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e0552320a3ba19a22f098394ea32287d09d453fe" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Teams</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/headerpanel/headerpanel.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5170ee2d39811121df9bbb3aec5fd479404445db" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/headerpanel/headerpanel.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e979b73a1b17f4fb1e46addc24a4bc4f7899b8d1" datatype="html">
+        <source>Add post title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/create-post/create-post.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f9ad8ccb714e4181428e9f00969fadecd5db831d" datatype="html">
+        <source>Upload featured image</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/create-post/create-post.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/create-team/create-team.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5dfcb7c515d1edd75ff7400e887262e6615e2816" datatype="html">
+        <source>Post Content</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/create-post/create-post.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a8233de047500bf0f0d9f9f1712ddb071501a283" datatype="html">
+        <source>Summary</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/create-post/create-post.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="223aae0477f79f0bc4436c1c57619415f04cbbb3" datatype="html">
+        <source>Publish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/create-post/create-post.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/create-team/create-team.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="96a4b56f79813be670aa1d59ff98d7a1bdd69618" datatype="html">
+        <source>Public:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/create-post/create-post.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/create-team/create-team.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="52c9a103b812f258bcddc3d90a6e3f46871d25fe" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/create-post/create-post.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/create-team/create-team.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c5bb9f8936cb33db2ca351a1b87a984fdf11917c" datatype="html">
+        <source>Comments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/single-post/single-post.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="73c0a017e42353ac091f4a487c3d9ada970c7dce" datatype="html">
+        <source>Add Comment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="96fbdb5c92b8273e93e834fc675611e9fb13f168" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ comment.author.username }}"/> wrote:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="583b36ed683e5e1570811be68f3470ff5ab43b79" datatype="html">
+        <source>Answer to comment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e0b5f1bd43d4d274dcef84427368987336e54810" datatype="html">
+        <source>Edit comment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d78f74f3b0ef2386bd9e9348a9de8b753bb16b9f" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ subComment.author.username }}"/> wrote:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cc0a5bc1808eccde8a98d55c7cefc4d4432066f2" datatype="html">
+        <source>Answer to
+              comment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3f9670387bc88762956e1e9f9960f09598f2b378" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ subSubComment.author.username }}"/> wrote:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c5c1a34ea3261f51aeee9b0200b861047ad1e1cb" datatype="html">
+        <source>Answer to
+                comment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c821dac3abb245eecc435bfe0eb5892a22a4852c" datatype="html">
+        <source>Edit
+                comment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/post/post.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="66f457973af116f0f290e580a104c492594368ba" datatype="html">
+        <source>Create New Post</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/posts/user-posts/user-posts.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f546770f7bc44f217178ed9ec5af29d8d0a386b3" datatype="html">
+        <source>Add team title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/create-team/create-team.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7ef0a6318432d4ae0bd43c407ad4af1d30a19eb6" datatype="html">
+        <source>Team Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/create-team/create-team.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="80fa90ce67552f3f8a824f756a94327e41d3fc49" datatype="html">
+        <source>Members</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="abe7ed15016b3bb102342671425e6d40d6e356de" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>Remove member</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="37d607e4b24ff71f871d4fee2e6ff38782cf9e58" datatype="html">
+        <source>Applicants</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="490903cd8d701ce2c2119cff54523b894a4d886b" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>Accept member</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="af8e2b2bde3aab9e4d8b416c0b196d90a489a55a" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>Reject member</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-team/edit-team.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="af3425d3620e0ddbd086eaca5e70303e15f6be40" datatype="html">
+        <source>Create New Team</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/edit-teams/edit-teams.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3a3b45d115efaca432bc99c91c4dab45093492c8" datatype="html">
+        <source>Environmental News from all over the world</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feed/feed.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1bba4411cd05fdb6beb32a107c55d70d132c4905" datatype="html">
+        <source>publication date: <x id="INTERPOLATION" equiv-text="{{ post.created_at }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/feed/feed.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/single-post/single-post.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d154f525a6bdb54e082cbc4b01f55bb89facf9f2" datatype="html">
+        <source>Add event title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="327d20623c426c6f82bfb182594044eba8a28858" datatype="html">
+        <source>Event Content</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="230d0dab454f0fd486dbf74595310e92ab642017" datatype="html">
+        <source>Starts at:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="71179f5a169c95cbcebc7d2676f35e421a527606" datatype="html">
+        <source>Ends at:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4bebbae34f84157c0b5b852529f0bc2c39a5a38a" datatype="html">
+        <source>Location:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/create-event/create-event.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/edit-event/edit-event.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8014931ccf8813bfcaf6d626cae99802ae631af8" datatype="html">
+        <source>Starts at: <x id="INTERPOLATION" equiv-text="{{event.start}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/event/event.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4b634e28973702a446a043627e1f28c2440e5e6e" datatype="html">
+        <source>Ends at: <x id="INTERPOLATION" equiv-text="{{event.end}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/event/event.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9ee62f1fea03762be6e9932546cccb9057c774f0" datatype="html">
+        <source>Location: <x id="INTERPOLATION" equiv-text="{{event.place}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/event/event.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="15e237123f4d0290342951d02d7b5d49d42f4588" datatype="html">
+        <source>*User Profile Picture Link*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/event/event.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="87efe3b09ef87f31cdd1f602d4ee7b5ba4929bc5" datatype="html">
+        <source>Create New Event</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/events/user-events/user-events.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2163c2dc8ae6ce7f003f1e0e75fbd493ae85b32e" datatype="html">
+        <source>
+        Event starts At: <x id="INTERPOLATION" equiv-text="{{ post.event.start }}"/> and ends at: <x id="INTERPOLATION_1" equiv-text="{{ post.event.end }}"/>
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/single-post/single-post.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b3890de804f9999f0b335ba25429f42004e52ff5" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Like <x id="INTERPOLATION" equiv-text="{{likes}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/single-post/single-post.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

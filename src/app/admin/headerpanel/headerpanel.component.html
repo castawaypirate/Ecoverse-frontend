@@ -9,16 +9,16 @@
       <nav>
         <ul class="side">
             <li class="side-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-              <a routerLink="/admin"><i class="fa fa-user" style="margin-right: 5px;"></i>Profile</a>
+              <a i18n routerLink="/admin"><i class="fa fa-user" style="margin-right: 5px;"></i>Profile</a>
             </li>
             <li class="side-item" routerLinkActive="active">
-              <a routerLink="/admin/posts"><i class="fa fa-list-alt" aria-hidden="true"></i> Posts</a>
+              <a i18n routerLink="/admin/posts"><i class="fa fa-list-alt" aria-hidden="true"></i> Posts</a>
             </li>
           <li class="side-item" routerLinkActive="active">
-            <a routerLink="/admin/events"><i class="fa fa-list-alt" aria-hidden="true"></i> Events</a>
+            <a i18n routerLink="/admin/events"><i class="fa fa-list-alt" aria-hidden="true"></i> Events</a>
           </li>
             <li class="side-item" routerLinkActive="active">
-              <a routerLink="/admin/teams"><i class="fa fa-users" aria-hidden="true"></i> Teams</a>
+              <a i18n routerLink="/admin/teams"><i class="fa fa-users" aria-hidden="true"></i> Teams</a>
             </li>
         </ul>
       </nav>
@@ -26,7 +26,7 @@
     <div class="usercollapse">
         <button #userbtn (click)="expand(userbtn,content)" type="button" class="userbtn">{{text}}<i class="fa fa-caret-down"></i></button>
       <div #content class="content">
-        <a style="color: white;" (click)="logout()" routerLink="/"><span class="iconify" data-icon="fa-solid:sign-out-alt" data-inline="false"></span> Logout</a>
+        <a i18n style="color: white;" (click)="logout()" routerLink="/"><span class="iconify" data-icon="fa-solid:sign-out-alt" data-inline="false"></span> Logout</a>
       </div>
     </div>
   </div>
