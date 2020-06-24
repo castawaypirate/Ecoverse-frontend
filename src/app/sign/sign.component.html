@@ -1,9 +1,9 @@
 <div class="cl">
     <div class="container">
         <ul class="tab-group">
-            <li class="tablink" (click)="showRegister()" [class.active]="show"><a>Create an account</a></li>
+            <li class="tablink" (click)="showRegister()" [class.active]="show"><a i18n>Create an account</a></li>
             <div class="vl"></div>
-            <li class="tablink" (click)="showLogin()" [class.active]="!show"><a>Sign in</a></li>
+            <li class="tablink" (click)="showLogin()" [class.active]="!show"><a i18n>Sign in</a></li>
         </ul>
         <div id="sign-up-tab" class="tabcontent" *ngIf="show">
             <hr>
@@ -35,10 +35,10 @@
                       </div>
                 </div>
 
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <p i18n>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
                 <div class="clearfix">
-                    <button type="submit" class="signbtn" [disabled]="!userprofileForm.valid">Create an account</button>
+                    <button i18n type="submit" class="signbtn" [disabled]="!userprofileForm.valid">Create an account</button>
                 </div>
             </form>
         </div>
@@ -58,13 +58,13 @@
 
                 <div class="con4">
                     <label>
-                        <input type="checkbox"  name="remember"> Remember me
+                        <input i18n type="checkbox"  name="remember"> Remember me
                     </label>
-                    <div><a href="#" style="color:dodgerblue">Forgot password?</a></div>
+                    <div><a i18n href="#" style="color:dodgerblue">Forgot password?</a></div>
                 </div>
 
                 <div class="clearfix">
-                    <button type="submit" class="signbtn" [disabled]="!memberprofileForm.valid">Sign in</button>
+                    <button i18n type="submit" class="signbtn" [disabled]="!memberprofileForm.valid">Sign in</button>
                 </div>
 
             </form>

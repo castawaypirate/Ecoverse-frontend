@@ -60,6 +60,14 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "gr": {
+              "aot": true,
+              "outputPath": "dist/merged/",
+              "i18nFile": "src/locales/messages.gr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "gr",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -71,6 +79,9 @@
           "configurations": {
             "production": {
               "browserTarget": "merged:build:production"
+            },
+            "gr":{
+              "browserTarget": "merged:build:gr"
             }
           }
         },

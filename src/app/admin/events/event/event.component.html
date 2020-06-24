@@ -10,13 +10,13 @@
     <p>{{ post?.content }}</p>
   </div>
     <div class="event_info">
-      <div class="line">Starts at: {{event.start}}</div>
-      <div class="line">Ends at: {{event.end}}</div>
-      <div class="line">Location: {{event.place}}</div>
+      <div i18n class="line">Starts at: {{event.start}}</div>
+      <div i18n class="line">Ends at: {{event.end}}</div>
+      <div i18n class="line">Location: {{event.place}}</div>
     </div>
   </div>
   <div class="info">
-    <p>*User Profile Picture Link*</p>
+    <p i18n>*User Profile Picture Link*</p>
     <p>{{post?.updated_at.toString().split('T')[0]}}</p>
   </div>
 </div>
