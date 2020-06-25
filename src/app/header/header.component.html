@@ -14,7 +14,8 @@
                 <a i18n routerLink="/contact">Contact</a>
             </li>
             <li class="menu-item" routerLinkActive="active">
-                <a i18n routerLink="/sign">Sign</a>
+                <a i18n routerLink="/sign" *ngIf="!auth">Sign</a>
+                <a i18n routerLink="/sign" *ngIf="auth">Profile</a>
             </li>
             <li class="menu-item" routerLinkActive="active">
                 <a i18n routerLink="/feed">Feed</a>

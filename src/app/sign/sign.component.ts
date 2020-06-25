@@ -51,7 +51,7 @@ export class SignComponent implements OnInit {
       this.auth.accessToken),
       localStorage.setItem('user',
         JSON.stringify(this.auth.user)),
-      this.router.navigate(['/userprofile'])});
+      this.router.navigate(['/admin'])});
   }
 
   onLogin() {
@@ -61,7 +61,7 @@ export class SignComponent implements OnInit {
         this.auth.accessToken),
         localStorage.setItem('user',
         JSON.stringify(this.auth.user)),
-        this.router.navigate(['/userprofile'])},
+        this.router.navigate(['/admin'])},
         err => {console.log(err)});
   }
 
