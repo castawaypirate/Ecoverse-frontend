@@ -1,0 +1,158 @@
+$danger: var(--color-danger);
+
+:host {
+  width: 100%;
+}
+
+.usercontainer {
+  display: flex;
+  padding: 0.8rem;
+  width: 85%;
+  margin-right: 2rem;
+}
+
+.column {
+  display: block;
+  margin: 1rem;
+
+}
+
+.card {
+  display: block;
+}
+
+.card .card-body {
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  padding: 0rem;
+  color: gray;
+}
+
+.card-img-top {
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50%;
+  padding-bottom: 15px;
+}
+
+.cardinfo {
+  padding: 0.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 1rem 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.cardinfo-body {
+  padding: 0 0.5rem;
+  color: black;
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+  padding: 15px;
+}
+
+.data {
+  width: 140%;
+  border-width:0;
+  border-radius: 6px;
+  // border:none;
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+}
+
+.lab {
+  width: 55%;
+  text-align: left;
+}
+
+.data:focus {
+  // border-width:0px;
+  // border:none;
+  // outline: none;
+  // border-radius: 10px;
+  outline-width: 0px;
+}
+
+.card-body-btn {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.btn-secondary {
+  margin: 10px;
+  outline-width: 0px;
+}
+
+.btn-primary {
+  margin: 10px;
+  background-color: $danger;
+  filter: brightness(150%);
+  outline-width: 0px;
+}
+
+.btn-primary:hover {
+  filter: brightness(130%);
+}
+
+.image-form {
+  position: relative;
+  .btn-edit {
+    position: absolute;
+    bottom: 0;
+    display: none;
+  }
+  &:hover {
+    .btn-edit {
+      display: block;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+  .column {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  .usercontainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card {
+    margin: 5px !important;
+    padding: 5px !important;
+  }
+
+  .data {
+    width: 130%;
+  }
+
+  .lab {
+    width: 69%;
+  }
+}

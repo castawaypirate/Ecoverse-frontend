@@ -1,0 +1,45 @@
+<div class="whole">
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <div class="main_box">
+      <div class="title">
+        <b i18n style="font-size: 20px">Add event title</b>
+        <input type="text" id="title" formControlName="title" [(ngModel)]="prevPost.title">
+        <label for="title" title="Title" data-title="Title"></label>
+      </div>
+
+      <div class="content">
+        <b i18n style="font-size: 20px">Upload featured image</b>
+        <button (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit">
+          <i class="fas fa-upload"></i></button>
+        <input #fileInput (change)="fileUpload(fileInput)" type="file">
+        <b i18n style="font-size: 20px">Event Content</b>
+        <textarea formControlName="content"[(ngModel)]="prevPost.content"></textarea>
+      </div>
+      <div class="summary">
+        <b i18n style="font-size: 20px">Summary</b>
+        <textarea></textarea>
+      </div>
+      <div class="publish">
+        <b i18n>Publish</b>
+        <div class="public">
+          <img src="https://img.icons8.com/material-sharp/24/000000/visible.png" style="width: 20px; height: 20px;">
+          <p i18n style="margin-left: 8px">Public:</p>
+          <input type="checkbox" formControlName="public" [(ngModel)]="prevPost.public">
+        </div>
+        <div class="public">
+          <p i18n>Starts at:</p>
+          <input style="margin-left: 8px" type="date" formControlName="start">
+        </div>
+        <div class="public">
+          <p i18n>Ends at:</p>
+          <input style="margin-left: 8px" type="date" formControlName="end">
+        </div>
+        <div class="public">
+          <p i18n>Location:</p>
+          <input style="margin-left: 8px" type="text" formControlName="place" [(ngModel)]="prevEvent.place">
+        </div>
+        <button i18n type="submit">Edit</button>
+      </div>
+    </div>
+  </form>
+</div>

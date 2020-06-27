@@ -1,0 +1,64 @@
+<div class="main_box">
+  <div class="border_image">
+    <img src="{{ post?.image ? post.image : '../../assets/images/env.jpeg' }}">
+  </div>
+  <div class="title">
+    <b>{{ post?.title }}</b>
+  </div>
+  <div class="whole_content">
+  <div class="content">
+    <p>{{ post?.content }}</p>
+  </div>
+  </div>
+  <div class="info">
+    <p>*User Profile Picture Link*</p>
+    <p>{{ post?.updated_at.toString().split('T')[0] }}</p>
+  </div>
+  <div *ngIf="auth" class="actions">
+    <button class="btn" [class.liked]="liked" (click)="handleLike()"><span class="fas fa-tree"></span> Like
+      {{ likes }}</button>
+    <div id="comments" class="comments">
+      <h3 i18n>Comments</h3>
+      <form [formGroup]="commentForm" (submit)="comment()">
+        <textarea formControlName="content"></textarea>
+        <button i18n class="btn btn-primary">Add Comment</button>
+      </form>
+      <div *ngIf="comment_id" class="answerForm">
+        <form [formGroup]="answerForm" (submit)="answerComment()">
+          <textarea formControlName="content"></textarea>
+          <button i18n class="btn btn-primary">Add Comment</button>
+          <button i18n type="button" class="btn btn-secondary" (click)="hideAnswer()">Cancel</button>
+        </form>
+      </div>
+      <div *ngFor="let comment of post?.comments" class="comment_section">
+        <div class="comment">
+          <p i18n>{{ comment.author.username }} wrote:</p>
+          <p class="content">{{ comment.content }}</p>
+          <div class="com_but">
+            <button i18n class="btn btn-primary" (click)="showAnswer(comment.comments, comment)">Answer to comment</button>
+            <button i18n *ngIf="comment.author.username == user.username" class="btn btn-secondary">Edit comment</button>
+          </div>
+        </div>
+        <div *ngFor="let subComment of comment.comments">
+          <div class="comment">
+            <p i18n>{{ subComment.author.username }} wrote:</p>
+            <p class="content">{{ subComment.content }}</p>
+            <button i18n class="btn btn-primary" (click)="showAnswer(subComment.comments, subComment)">Answer to
+              comment</button>
+            <button i18n *ngIf="subComment.author.username == user.username" class="btn btn-secondary">Edit comment</button>
+          </div>
+          <div class="comment" *ngFor="let subSubComment of subComment.comments">
+            <div class="comment">
+              <p i18n>{{ subSubComment.author.username }} wrote:</p>
+              <p class="content">{{ subSubComment.content }}</p>
+              <button i18n class="btn btn-primary" (click)="showAnswer(subComment.comments, subSubComment)">Answer to
+                comment</button>
+              <button i18n *ngIf="subSubComment.author.username == user.username" class="btn btn-secondary">Edit
+                comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

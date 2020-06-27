@@ -1,0 +1,88 @@
+
+.container{
+    display:flex;
+    padding: 5px;
+}
+
+.box {
+    margin: 20px;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    background-color: rgb(244, 247, 250);
+}
+
+
+.card-img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding-left : 6px;
+    border-radius: 20px;
+    
+}
+.date{
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    
+}
+
+.boxquote{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align : justify ; 
+    margin : 12px;
+    margin-top:0;
+    padding : 12px;
+    max-height: 289.5px; 
+    overflow: hidden;
+    
+}
+.u-underline {
+    text-decoration: none !important;
+    border-bottom: 0.05rem solid red;
+}
+.articles{
+    flex:15%;
+    margin:0;
+    padding : 0;
+    margin-top:30px;
+    display:block;  
+    justify-content: center;
+}
+.art-img{
+    max-width: 100%;
+    
+}
+.news{
+    flex:85%;  
+}
+.chapter{
+    border-bottom :1px solid black ;
+    margin : 20px;
+    margin-right: 60px;
+    margin-top: 30px;
+    width:120px;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover {
+    color : rgb(21, 138, 56);
+}
+
+a:active{
+    color : black;
+}
+
+.liked {
+    color: var(--color-primary) !important;
+}
