@@ -1,0 +1,8 @@
+<div class="cont">
+  <ul>
+    <li class="tm" *ngFor="let team of teams">
+        <button class="btn" routerLink="/team/{{team.id}}">{{ team.name }}<i class="fa fa-users"></i></button><i class="fa fa-trash"></i>
+    </li>
+</ul>
+</div>
+

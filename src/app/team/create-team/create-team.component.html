@@ -1,0 +1,29 @@
+<div class="whole">
+  <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+    <div class="main_box">
+      <div class="title">
+        <b i18n style="font-size: 20px">Add team title</b>
+        <input type="text" id="title" placeholder="Enter title here" formControlName="name">
+        <label for="title" title="Title" data-title="Title"></label>
+      </div>
+
+      <div class="content">
+        <b i18n style="font-size: 20px">Upload featured image</b>
+        <button (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit">
+          <i class="fas fa-upload"></i></button>
+        <input #fileInput (change)="fileUpload(fileInput)" type="file">
+        <b i18n style="font-size: 20px">Team Description</b>
+        <textarea formControlName="description"></textarea>
+      </div>
+      <div class="publish">
+        <b i18n>Publish</b>
+        <div class="public">
+          <img src="https://img.icons8.com/material-sharp/24/000000/visible.png" style="width: 20px; height: 20px;">
+          <p i18n style="margin-left: 8px">Public:</p>
+          <input type="checkbox" formControlName="public">
+        </div>
+        <button i18n type="submit">Save</button>
+      </div>
+    </div>
+  </form>
+</div>

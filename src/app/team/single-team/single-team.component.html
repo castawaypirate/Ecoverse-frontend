@@ -1,0 +1,15 @@
+<div class="cont">
+  <div class="tm">
+    <h1 style="margin-bottom: 15px;">{{ team?.name }}<i class="fa fa-users"></i></h1>
+    <p style="margin:0;">{{ team?.description }} </p>
+  </div>
+  <ul>
+      <div class="pst">
+        <li *ngFor="let post of team?.posts">
+          <span class="author">{{ post.author_id }}<i class="fa fa-user"></i></span>
+          <p>{{ post.content }}</p> -->
+        </li>
+      </div>
+  </ul>
+</div>
+

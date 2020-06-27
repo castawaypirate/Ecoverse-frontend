@@ -1,0 +1,57 @@
+<div class="usercontainer" style="width: 100%;">
+  <div class="column" style="width: 30%; margin-left: 10%;">
+    <div class="card">
+      <form [formGroup]="userForm" class="image-form">
+        <img class="card-img-top" src="{{ profilePic ? profilePic : '../assets/images/profile.jpg'}}" alt="Card image cap">
+        <button i18n (click)="triggerUpload(fileInput)" type="button" class="btn btn-secondary btn-edit"><i
+            class="fas fa-upload"></i>Upload Image</button>
+        <input #fileInput (change)="fileUpload(fileInput)" type="file">
+      </form>
+      <div class="card-body">
+        <form [formGroup]="userForm">
+
+          <input class="data" style="width: 100% !important; font-size: larger;" type="text" placeholder="username"
+            [readOnly]="editable" formControlName="username">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="column" style="width: 50%;">
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="profileForm">
+          <div class="field">
+            <label i18n class="lab" for="name">First Name : </label>
+            <input class="data" type="text" placeholder="first name" [readOnly]="editable" formControlName="name"><br>
+          </div>
+          <div class="field">
+            <label i18n class="lab" for="surname">Last Name : </label>
+            <input class="data" type="text" placeholder="last name" [readOnly]="editable" formControlName="surname"><br>
+          </div>
+          <div class="field">
+            <label i18n class="lab" for="email">Email : </label>
+            <input class="data" type="text" placeholder="email" [readOnly]="editable" formControlName="email"><br>
+          </div>
+          <div class="field">
+            <label i18n class="lab" for="location">Location : </label>
+            <input class="data" type="text" placeholder="location" [readOnly]="editable" formControlName="location"><br>
+          </div>
+          <div class="field">
+            <label i18n class="lab" for="birthday">Birthday : </label>
+            <input class="data" style="width: 85%;" type="date" placeholder="birthday" [readOnly]="editable"
+              formControlName="birth_date"><br>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="column" style="width: 20%; margin-right: 10%;">
+    <div class="card">
+      <div class="card-body-btn">
+        <button i18n #ed (click)="edit(ed)" class="btn btn-secondary">Edit</button>
+        <button i18n (click)="delete()" class="btn btn-primary">Delete</button>
+      </div>
+    </div>
+  </div>
+
+</div>

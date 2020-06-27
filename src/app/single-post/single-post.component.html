@@ -1,0 +1,17 @@
+<div class="box">
+    <img class="card-img" src="{{ post.image ? post.image : 'assets/images/dull.jpg' }}">
+    <div class="boxquote">
+      <a [routerLink]="post?.event ? '/event/' + post.event.id : '/post/' + post.id">
+        <h3>{{ post.title }}</h3>
+        <span i18n class="date">publication date: {{ post.created_at }}</span>
+        <p>{{ post.summary }}</p>
+      </a>
+      <div i18n *ngIf="post?.event">
+        Event starts At: {{ post.event.start }} and ends at: {{ post.event.end }}
+      </div>
+      <div *ngIf="auth" class="actions">
+        <button i18n class="btn" [class.liked]="liked" (click)="handleLike()"><span class="fas fa-tree"></span> Like {{likes}}</button>
+        <button i18n *ngIf="!post?.event" class="btn comment" routerLink="/post/{{post.id}}" fragment="comments">Comments</button>
+      </div>
+    </div>
+  </div>
